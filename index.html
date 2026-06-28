@@ -1,1 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2f2e" />
+  <title>Skyler Davis | Vermont Luxury Real Estate Advisor</title>
+  <meta name="description" content="Skyler Davis is a Global Real Estate Advisor with Four Seasons Sotheby’s International Realty, helping clients buy and sell luxury homes, relocation properties, Lake Champlain homes, Chittenden County residences, and Vermont mountain and vacation properties." />
+  <meta name="keywords" content="Skyler Davis real estate, Vermont luxury real estate, Burlington VT luxury real estate, Lake Champlain luxury homes, Chittenden County real estate, Stowe real estate advisor, Vermont resort properties, Four Seasons Sotheby's International Realty, South Burlington real estate, Jericho VT real estate, Vermont relocation real estate" />
+  <meta name="author" content="Skyler Davis" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.example.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Skyler Davis | Vermont Luxury Real Estate Advisor" />
+  <meta property="og:description" content="Skyler Davis is a Global Real Estate Advisor with Four Seasons Sotheby’s International Realty, helping clients buy and sell luxury homes, relocation properties, Lake Champlain homes, Chittenden County residences, and Vermont mountain and vacation properties." />
+  <meta property="og:image" content="skyler.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skyler Davis | Vermont Luxury Real Estate Advisor" />
+  <meta name="twitter:description" content="Skyler Davis is a Global Real Estate Advisor with Four Seasons Sotheby’s International Realty, helping clients buy and sell luxury homes, relocation properties, Lake Champlain homes, Chittenden County residences, and Vermont mountain and vacation properties." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Skyler Davis",
+    "jobTitle": "Global Real Estate Advisor",
+    "url": "https://www.example.com/",
+    "image": "https://www.example.com/skyler.jpg",
+    "telephone": "+1-000-000-0000",
+    "email": "hello@example.com",
+    "worksFor": {
+      "@type": "RealEstateAgent",
+      "name": "Four Seasons Sotheby's International Realty"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Burlington",
+      "addressRegion": "VT",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Burlington, VT" },
+      { "@type": "City", "name": "South Burlington, VT" },
+      { "@type": "City", "name": "Jericho, VT" },
+      { "@type": "AdministrativeArea", "name": "Chittenden County, VT" },
+      { "@type": "City", "name": "Stowe, VT" },
+      { "@type": "Place", "name": "Lake Champlain" },
+      { "@type": "AdministrativeArea", "name": "Northwest Vermont" }
+    ],
+    "knowsAbout": ["Vermont luxury real estate", "Lake Champlain homes", "Chittenden County residential sales", "Relocation", "Strategic pricing", "Negotiation", "Mountain and vacation properties", "Stowe resort communities"]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #0f1f1f;
+      --deep: #12352f;
+      --green: #2f5f3a;
+      --lake: #4d7f91;
+      --cream: #f7f1e6;
+      --sand: #e5d2b3;
+      --white: #ffffff;
+      --muted: #677371;
+      --line: rgba(15, 47, 46, .14);
+      --shadow: 0 22px 55px rgba(15, 31, 31, .14);
+      --radius: 24px;
+      --max: 1180px;
+    }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(246, 241, 231, .92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 76px; gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; line-height: 1; min-width: 215px; }
+    .brand-logo { width: 58px; height: auto; display: block; }
+    .brand-text { display: grid; gap: 3px; }
+    .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; color: var(--deep); }
+    .brand-sub { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+    .nav-links { display: flex; align-items: center; gap: 17px; font-size: .94rem; color: #263b39; }
+    .nav-links a:hover { color: var(--green); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 46px; padding: 0 20px; border-radius: 999px;
+      background: var(--deep); color: var(--white); font-weight: 700;
+      box-shadow: 0 12px 25px rgba(15, 47, 46, .18);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(15, 47, 46, .22); background: #163f3d; }
+    .btn.secondary { background: transparent; color: var(--deep); border: 1px solid var(--deep); box-shadow: none; }
+    .btn.secondary:hover { background: rgba(15, 47, 46, .06); }
+
+    .hero {
+      position: relative; overflow: hidden; color: var(--white);
+      background:
+        linear-gradient(120deg, rgba(15,47,46,.94), rgba(15,47,46,.68)),
+        radial-gradient(circle at 75% 25%, rgba(81,124,137,.85), transparent 35%),
+        linear-gradient(135deg, #14372f, #315f3b 45%, #6e7f67);
+      min-height: 640px;
+      display: grid; align-items: center;
+    }
+    .hero:after {
+      content: ""; position: absolute; inset: auto 0 0 0; height: 170px;
+      background: linear-gradient(to top, var(--cream), rgba(246,241,231,0));
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.35fr .65fr; gap: 42px; align-items: center; padding: 82px 0 104px; }
+    .eyebrow { margin: 0 0 14px; color: var(--green); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: .78rem; }
+    .hero .eyebrow { color: #d7c4a4; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.05; margin: 0; }
+    h1 { font-size: clamp(2.65rem, 5.2vw, 5rem); letter-spacing: -.045em; max-width: 1180px; line-height: .96; }
+    h1 em { font-style: italic; color: #e7d3ad; }
+    .hero p:not(.eyebrow) { font-size: clamp(1.05rem, 1.55vw, 1.25rem); max-width: 820px; color: rgba(255,255,255,.88); margin: 24px 0 0; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+    .hero-card {
+      align-self: end; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); backdrop-filter: blur(10px);
+    }
+    .hero-card .label { color: #e7d3ad; font-size: .82rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; }
+    .hero-card strong { display: block; margin-top: 8px; font-family: Georgia, serif; font-size: 1.75rem; line-height: 1.12; }
+    .hero-card p { margin-top: 12px !important; font-size: 1rem !important; color: rgba(255,255,255,.8) !important; }
+
+    .stats { margin-top: -70px; position: relative; z-index: 3; }
+    .stats-grid { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); display: grid; grid-template-columns: repeat(3,1fr); overflow: hidden; border: 1px solid var(--line); }
+    .stat { padding: 28px 30px; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat-num { display: block; font-family: Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--deep); }
+    .stat-label { display: block; color: var(--muted); margin-top: 6px; font-size: .95rem; }
+
+    section { padding: 92px 0; }
+    .section-head { max-width: 780px; margin-bottom: 34px; }
+    h2 { font-size: clamp(2rem, 3.4vw, 3.35rem); letter-spacing: -.035em; color: var(--deep); line-height: 1.05; }
+    .section-head p { font-size: 1.1rem; color: var(--muted); margin: 18px 0 0; }
+
+    .about-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 54px; align-items: center; }
+    .portrait {
+      min-height: 500px; border-radius: var(--radius); overflow: hidden; background:
+        linear-gradient(135deg, rgba(15,47,46,.05), rgba(81,124,137,.22)),
+        url('skyler.jpg') center/cover no-repeat;
+      border: 1px solid var(--line); box-shadow: var(--shadow); position: relative;
+    }
+    .about-copy p { color: #314442; font-size: 1.08rem; margin: 0 0 18px; }
+    .socials { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .socials a { border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; color: var(--green); background: rgba(255,255,255,.7); font-weight: 700; }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px;
+      box-shadow: 0 14px 35px rgba(15,31,31,.07);
+    }
+    .card h3 { color: var(--deep); font-size: 1.65rem; margin-bottom: 12px; }
+    .card p { color: var(--muted); margin: 0; }
+
+    .areas { background: #fbf8f1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+    .map-card {
+      background: linear-gradient(135deg, rgba(81,124,137,.18), rgba(47,95,85,.12));
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; min-height: 340px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .map-visual { border-radius: 20px; min-height: 210px; background:
+      radial-gradient(circle at 24% 28%, #0f2f2e 0 7px, transparent 8px),
+      radial-gradient(circle at 42% 46%, #0f2f2e 0 7px, transparent 8px),
+      radial-gradient(circle at 58% 32%, #0f2f2e 0 7px, transparent 8px),
+      radial-gradient(circle at 72% 58%, #0f2f2e 0 7px, transparent 8px),
+      linear-gradient(120deg, rgba(81,124,137,.35), rgba(232,220,201,.55));
+      position: relative; overflow: hidden;
+    }
+    .map-visual:before { content:"Lake Champlain"; position:absolute; left:20px; bottom:18px; font-family: Georgia, serif; font-size: 1.5rem; color: rgba(15,47,46,.72); }
+    .town-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .town-list a { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; font-weight: 800; color: var(--deep); }
+
+    .sales-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .sale { overflow: hidden; border-radius: var(--radius); border: 1px solid var(--line); background: var(--white); box-shadow: 0 14px 35px rgba(15,31,31,.07); }
+    .sale-image { min-height: 210px; background: linear-gradient(135deg, rgba(15,47,46,.15), rgba(81,124,137,.25)); display: grid; place-items: center; color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+    .sale-body { padding: 22px; }
+    .sale-location { margin: 0 0 6px; color: var(--muted); font-size: .9rem; }
+    .sale h3 { font-size: 1.55rem; color: var(--deep); margin-bottom: 8px; }
+    .sale-price { color: var(--green); font-weight: 800; margin: 0; }
+
+    .valuation { background: var(--deep); color: var(--white); text-align: center; }
+    .valuation h2 { color: var(--white); }
+    .valuation p { color: rgba(255,255,255,.78); max-width: 720px; margin: 18px auto 28px; font-size: 1.1rem; }
+    .valuation .btn { background: #e7d3ad; color: var(--deep); box-shadow: none; }
+
+    .quote { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow); max-width: 920px; }
+    .quote p { font-family: Georgia, serif; font-size: clamp(1.35rem, 2.5vw, 2.05rem); color: var(--deep); line-height: 1.35; margin: 0; }
+    .quote cite { display: block; margin-top: 18px; color: var(--muted); font-style: normal; font-weight: 800; }
+
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    details { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+    summary { cursor: pointer; font-weight: 900; color: var(--deep); }
+    details p { color: var(--muted); margin-bottom: 0; }
+
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 38px; align-items: start; }
+    .contact-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .contact-card a { display: block; padding: 18px 0; border-bottom: 1px solid var(--line); color: var(--deep); font-weight: 800; }
+    .contact-card a:last-child { border-bottom: 0; }
+    form { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    label { display: block; font-weight: 800; margin-bottom: 6px; color: var(--deep); }
+    input, select, textarea { width: 100%; border: 1px solid var(--line); border-radius: 14px; padding: 14px 14px; font: inherit; margin-bottom: 16px; background: #fffdf8; }
+    textarea { min-height: 140px; resize: vertical; }
+    form .btn { border: 0; width: 100%; cursor: pointer; }
+
+    footer { padding: 38px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-logo { width: 220px; height: auto; margin-bottom: 12px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero { min-height: auto; }
+      h1 { font-size: clamp(2.45rem, 11vw, 3.9rem); }
+      .hero-grid, .about-grid, .area-grid, .contact-grid { grid-template-columns: 1fr; }
+      .stats-grid, .cards, .sales-grid, .faq-grid { grid-template-columns: 1fr; }
+      .stat { border-right: 0; border-bottom: 1px solid var(--line); }
+      .stat:last-child { border-bottom: 0; }
+      section { padding: 70px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Skyler Davis home">
+          <img class="brand-logo" src="skyler-logo-mark.png" alt="Skyler Davis Group Real Estate logo mark" />
+          <span class="brand-text"><span class="brand-name">Skyler Davis</span><span class="brand-sub">Real Estate</span></span>
+        </a>
+        <div class="nav-links">
+          <a href="about.html">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#vermont-luxury">VT Luxury</a>
+          <a href="index.html#areas">Communities</a>
+          <a href="index.html#sales">Featured Sales</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <a class="btn" href="index.html#contact">Contact Skyler</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Local Expertise. Global Connections.</p>
+          <h1>Vermont luxury. Local roots.</h1>
+          <p>Skyler Davis is a Global Real Estate Advisor with Four Seasons Sotheby's International Realty, helping clients buy and sell distinctive homes across Burlington, South Burlington, Jericho, Lake Champlain, Stowe, and Northwest Vermont.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Start a private conversation</a>
+            <a class="btn secondary" href="#valuation">Request a strategic valuation</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Skyler Davis Vermont luxury real estate positioning">
+          <span class="label">Vermont Luxury Advisor</span>
+          <strong>Chittenden County residential sales, luxury homes, relocation, and mountain and vacation properties.</strong>
+          <p>With deep Vermont roots, an MBA, and a decade of enterprise sales experience, Skyler brings thoughtful guidance, market intelligence, negotiation discipline, and personal attention to every client relationship.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="wrap stats">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-num">VT Roots</span>
+          <span class="stat-label">Raised in Jericho, a UVM two-time soccer captain, and now raising his family in South Burlington.</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">MBA Lens</span>
+          <span class="stat-label">A finance, pricing, and negotiation background that brings structure to important real estate decisions.</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Global Reach</span>
+          <span class="stat-label">Four Seasons Sotheby's International Realty exposure paired with personal Vermont market guidance.</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="portrait" role="img" aria-label="Skyler Davis Vermont real estate advisor portrait placeholder"></div>
+        <div class="about-copy">
+          <p class="eyebrow">Meet Skyler Davis</p>
+          <h2>Local roots. Modern strategy.</h2>
+          <p>For Skyler Davis, real estate is about more than buying and selling homes. It is about helping people navigate important life transitions with confidence.</p>
+          <p>Raised in Jericho and educated at the University of Vermont, Skyler understands the communities, landscapes, schools, recreation, and everyday rhythms that make the Champlain Valley such a desirable place to call home.</p>
+          <p>Before entering real estate, Skyler spent more than ten years in San Francisco leading complex enterprise sales initiatives for technology companies. That experience sharpened his negotiation, strategic planning, and client advocacy skills — now applied to helping Vermont buyers and sellers make confident decisions.</p>
+          <div class="hero-actions" style="margin-top: 22px;">
+            <a class="btn" href="about.html">Read Skyler's full bio</a>
+            <a class="btn secondary" href="#contact">Contact Skyler</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Specialties</p>
+          <h2>Guidance for real Vermont living.</h2>
+          <p>Skyler serves clients across Chittenden County, Lake Champlain, Stowe, and Vermont resort communities with a focus on distinctive residential properties, relocation, strategic pricing, negotiation, and data-driven marketing.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Luxury homes</h3>
+            <p>Guidance for distinctive Vermont properties where setting, privacy, architecture, condition, lifestyle, and long-term value all matter.</p>
+          </article>
+          <article class="card">
+            <h3>Relocation services</h3>
+            <p>Practical local insight for clients moving to Vermont and comparing neighborhoods, schools, recreation, commute patterns, and community fit.</p>
+          </article>
+          <article class="card">
+            <h3>Strategic pricing & negotiation</h3>
+            <p>A data-informed approach shaped by Skyler's MBA, enterprise sales background, and experience advocating for clients in complex decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vermont-luxury" class="areas">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Vermont luxury real estate</p>
+          <h2>Luxury shaped by Vermont.</h2>
+          <p>In Vermont, luxury real estate is not one-size-fits-all. It can mean a Lake Champlain shoreline home, a South Burlington property close to schools and daily life, a historic Burlington residence, a Jericho home with land and mountain views, or a Stowe-area retreat built around four-season recreation.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Lake Champlain & waterfront</h3>
+            <p>Homes shaped by lake access, sunsets, shoreline character, privacy, views, and the rare daily rhythm of living near the water.</p>
+          </article>
+          <article class="card">
+            <h3>Chittenden County living</h3>
+            <p>Burlington, South Burlington, Jericho, and nearby communities with access to schools, restaurants, trails, UVM, and Vermont's strongest residential markets.</p>
+          </article>
+          <article class="card">
+            <h3>Mountain & resort communities</h3>
+            <p>Skyler's Stratton Mountain School background and U.S. Ski Team experience give him a unique perspective on Stowe and Vermont's mountain lifestyle markets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas" id="areas">
+      <div class="wrap area-grid">
+        <div class="section-head">
+          <p class="eyebrow">Serving Northwest Vermont</p>
+          <h2>Small-town feel. Big-city access.</h2>
+          <p>Skyler works with buyers and sellers across the places that define Vermont living at its best: established Chittenden County neighborhoods, Lake Champlain communities, mountain towns, and vacation-home markets.</p>
+          <div class="town-list" aria-label="Primary service area links">
+            <a href="burlington-vt-real-estate.html">Burlington</a>
+            <a href="south-burlington-vt-real-estate.html">South Burlington</a>
+            <a href="jericho-vt-real-estate.html">Jericho</a>
+            <a href="shelburne-vt-real-estate.html">Shelburne</a>
+            <a href="charlotte-vt-real-estate.html">Charlotte</a>
+            <a href="colchester-vt-real-estate.html">Colchester</a>
+            <a href="essex-vt-real-estate.html">Essex</a>
+            <a href="stowe-vt-real-estate.html">Stowe</a>
+          </div>
+        </div>
+        <div class="map-card">
+          <div class="map-visual" aria-hidden="true"></div>
+          <p><strong>Local knowledge, elevated by global connections.</strong> Skyler combines Vermont market insight with the reach and brand platform of Four Seasons Sotheby's International Realty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sales">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Featured by Skyler</p>
+          <h2>Featured property examples.</h2>
+          <p>Placeholder cards for now. Once Skyler's verified listings or sales are available, this section should showcase approved property details, photography, and proof points tied to Lake Champlain, Chittenden County, relocation, and mountain or vacation properties.</p>
+        </div>
+        <div class="sales-grid">
+          <article class="sale"><div class="sale-image">Listing image</div><div class="sale-body"><p class="sale-location">Lake Champlain</p><h3>Waterfront or Lake-View Property</h3><p class="sale-price">Placeholder</p></div></article>
+          <article class="sale"><div class="sale-image">Listing image</div><div class="sale-body"><p class="sale-location">Chittenden County</p><h3>Luxury Residential Home</h3><p class="sale-price">Placeholder</p></div></article>
+          <article class="sale"><div class="sale-image">Listing image</div><div class="sale-body"><p class="sale-location">Stowe / Resort Market</p><h3>Mountain or Vacation Property</h3><p class="sale-price">Placeholder</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="valuation" id="valuation">
+      <div class="wrap valuation-inner">
+        <div>
+          <p class="eyebrow">Private valuation</p>
+          <h2>Selling a distinctive Vermont home?</h2>
+          <p>Get a strategic pricing conversation grounded in market data, buyer positioning, property presentation, and the Vermont lifestyle factors that make a home stand out.</p>
+        </div>
+        <a class="btn" href="#contact">Request a valuation</a>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Client experience</p><h2>Thoughtful client advocacy.</h2></div>
+        <div class="quote"><p>"Buying or selling a home is one of life's most important decisions. My goal is to provide clear guidance, strong advocacy, and a seamless experience while helping my clients make confident decisions every step of the way."</p><strong>— Skyler Davis</strong></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">FAQ</p><h2>Vermont real estate questions</h2></div>
+        <details><summary>What areas does Skyler serve?</summary><p>Skyler serves South Burlington, Burlington, Jericho, Greater Chittenden County, Stowe, Lake Champlain, and Vermont resort communities.</p></details>
+        <details><summary>What types of properties does Skyler specialize in?</summary><p>Skyler focuses on Chittenden County residential sales, luxury homes, relocation services, strategic pricing and negotiation, data-driven marketing, and mountain and vacation properties.</p></details>
+        <details><summary>Why work with a Sotheby's International Realty advisor?</summary><p>The Sotheby's International Realty platform provides premium brand positioning, global connections, and a strong marketing foundation for distinctive properties. Skyler pairs that reach with local Vermont knowledge and personal client advocacy.</p></details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact Skyler</p>
+          <h2>Talk with Skyler about your goals.</h2>
+          <p>Whether you are buying, selling, relocating, or evaluating a lake, mountain, vacation, or distinctive residential property, start with a private conversation.</p>
+        </div>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+          <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
+          <label>Phone<input type="tel" name="phone" placeholder="Your phone number" /></label>
+          <label>What can Skyler help with?<textarea name="message" rows="5" placeholder="Buying, selling, relocation, valuation, Lake Champlain, Chittenden County, Stowe, etc."></textarea></label>
+          <button class="btn" type="submit">Send message</button>
+          <p class="fine-print">Replace this placeholder form with your preferred CRM, email capture, or real estate lead system before launch.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <img class="footer-logo" src="skyler-logo-horizontal.png" alt="Skyler Davis Group Real Estate logo" />
+        <p>Global Real Estate Advisor<br />Four Seasons Sotheby's International Realty</p>
+      </div>
+      <div>
+        <a href="about.html">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#areas">Communities</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div>
+        <p>Serving South Burlington, Burlington, Jericho, Greater Chittenden County, Stowe, Lake Champlain, and Vermont resort communities.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
