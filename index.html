@@ -53,7 +53,7 @@
     .hero-card { background: rgba(247,241,230,.94); color: var(--ink); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.35); }
     .hero-card .label { display:block; color: var(--green); text-transform: uppercase; font-weight: 900; letter-spacing:.16em; font-size:.75rem; margin-bottom: 10px; }
     .hero-card strong { display:block; font-family: Georgia, serif; color: var(--deep); font-size: 2rem; line-height: 1.15; letter-spacing:-.03em; margin-bottom: 12px; }
-    .hero-card p { color: var(--muted); margin:0; font-size:1rem; }
+    .hero .hero-card p { color: #30413f; margin:0; font-size:1rem; }
     section { padding: 96px 0; }
     .stats { margin-top: -48px; position: relative; z-index: 2; }
     .stats-grid { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; box-shadow: var(--shadow); }
@@ -104,11 +104,20 @@
     details { background:var(--white); border:1px solid var(--line); border-radius:18px; padding:20px; }
     summary { cursor:pointer; font-weight:900; color:var(--deep); }
     details p { color:var(--muted); margin-bottom:0; }
-    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:38px; align-items:start; }
+    .contact-grid { display:grid; grid-template-columns:.82fr 1.18fr; gap:38px; align-items:start; }
     .contact-card { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
-    .contact-card a, .contact-card span { display:block; padding:16px 0; border-bottom:1px solid var(--line); color:var(--deep); font-weight:850; }
+    .contact-card a, .contact-card span { display:block; padding:14px 0; border-bottom:1px solid var(--line); color:var(--deep); font-weight:850; }
     .contact-card a:last-child, .contact-card span:last-child { border-bottom:0; }
     .contact-note { color: var(--muted); margin-top: 16px; }
+    .contact-form { display:grid; gap:14px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .field { display:grid; gap:7px; }
+    .field label { color:var(--deep); font-weight:850; font-size:.9rem; }
+    .field input, .field select, .field textarea { width:100%; border:1px solid var(--line); border-radius:16px; padding:13px 14px; font:inherit; color:var(--ink); background:#fbf8f1; outline:none; }
+    .field textarea { min-height:128px; resize:vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color:rgba(47,95,58,.55); box-shadow:0 0 0 4px rgba(47,95,58,.09); background:var(--white); }
+    .form-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:4px; }
+    .form-note { color:var(--muted); font-size:.88rem; margin:0; }
     footer { padding:38px 0; border-top:1px solid var(--line); color:var(--muted); }
     .footer-logo { width:220px; height:auto; margin-bottom:12px; }
     .footer-grid { display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center; }
@@ -117,7 +126,7 @@
       .nav-links { display:none; }
       .hero { min-height:auto; padding: 96px 0; }
       h1 { font-size: clamp(2.6rem, 11vw, 4.2rem); }
-      .hero-grid, .about-grid, .area-grid, .contact-grid { grid-template-columns:1fr; }
+      .hero-grid, .about-grid, .area-grid, .contact-grid, .form-row { grid-template-columns:1fr; }
       .stats-grid, .cards, .sales-grid, .faq-grid { grid-template-columns:1fr; }
       .stat { border-right:0; border-bottom:1px solid var(--line); }
       .stat:last-child { border-bottom:0; }
@@ -159,5 +168,5 @@
 <section class="valuation" id="valuation"><div class="wrap valuation-inner"><div><p class="eyebrow">Private valuation</p><h2>Thinking about selling?</h2><p>Start with a pricing conversation grounded in market data, buyer positioning, property presentation, and the lifestyle factors that make a Vermont home stand out.</p></div><a class="btn" href="#contact">Request a valuation</a></div></section>
 <section id="reviews"><div class="wrap"><div class="section-head"><p class="eyebrow">Client experience</p><h2>Clear guidance. Strong advocacy.</h2></div><div class="quote"><p>“Buying or selling a home is one of life’s most important decisions. My goal is to provide clear guidance, strong advocacy, and a seamless experience while helping my clients make confident decisions every step of the way.”</p><strong>— Skyler Davis</strong></div></div></section>
 <section id="faq"><div class="wrap"><div class="section-head"><p class="eyebrow">FAQ</p><h2>Common questions</h2></div><div class="faq-grid"><details><summary>What areas do you serve?</summary><p>I work across Northwest Vermont, with a focus on Burlington, South Burlington, Jericho, Chittenden County, Lake Champlain communities, Stowe, and nearby resort markets.</p></details><details><summary>What types of properties do you focus on?</summary><p>I focus on distinctive residential homes, relocation, Lake Champlain properties, and mountain or vacation homes across Northwest Vermont.</p></details><details><summary>Why work with a Sotheby’s International Realty advisor?</summary><p>The Sotheby’s International Realty platform provides strong brand positioning, global connections, and a premium marketing foundation. I pair that reach with local Vermont knowledge and personal client advocacy.</p></details><details><summary>How should I start?</summary><p>Reach out directly with your timing, goals, and the type of property or community you are considering. From there, we can talk through next steps.</p></details></div></div></section>
-<section id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">Contact Me</p><h2>Let’s talk about your goals.</h2><p>Whether you are buying, selling, relocating, or evaluating a lake, mountain, vacation, or distinctive residential property, start with a private conversation.</p></div><div class="contact-card"><a href="mailto:skyler.davis@fourseasonssir.com">Email: skyler.davis@fourseasonssir.com</a><a href="tel:+18023632356">Cell: +1 802.363.2356</a><a href="tel:+18028640541">Office: +1 802.864.0541</a><span>Four Seasons Sotheby’s International Realty</span><p class="contact-note">Share the community, property type, timing, and any questions you have. I’ll follow up directly.</p></div></div></section>
+<section id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">Contact Me</p><h2>Start a private conversation.</h2><p>Share what you are considering, where you are looking, and how I can help. I’ll follow up directly.</p><div class="contact-card"><a href="mailto:skyler.davis@fourseasonssir.com">Email: skyler.davis@fourseasonssir.com</a><a href="tel:+18023632356">Cell: +1 802.363.2356</a><a href="tel:+18028640541">Office: +1 802.864.0541</a><span>Four Seasons Sotheby’s International Realty</span></div></div><div class="contact-card"><form class="contact-form" action="mailto:skyler.davis@fourseasonssir.com" method="post" enctype="text/plain"><div class="field"><label for="interest">I’m interested in</label><select id="interest" name="Interest"><option value="Buying a home">Buying a home</option><option value="Selling a home">Selling a home</option><option value="Home valuation">A home valuation</option><option value="Relocation">Relocation guidance</option><option value="Lake or waterfront property">Lake or waterfront property</option><option value="Mountain or vacation property">Mountain or vacation property</option><option value="General question">A general question</option></select></div><div class="form-row"><div class="field"><label for="name">Name</label><input id="name" name="Name" type="text" autocomplete="name" required/></div><div class="field"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" autocomplete="tel"/></div></div><div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" autocomplete="email" required/></div><div class="field"><label for="message">Message</label><textarea id="message" name="Message" placeholder="Tell me a little about your goals, timing, preferred communities, or property type."></textarea></div><div class="form-actions"><button class="btn" type="submit">Send inquiry</button><a class="btn secondary" href="mailto:skyler.davis@fourseasonssir.com">Email directly</a></div><p class="form-note">This form opens your email app so you can review the message before sending.</p></form></div></div></section>
 </main><footer><div class="wrap footer-grid"><div><img alt="Skyler Davis Group Real Estate logo" class="footer-logo" src="skyler-logo-horizontal.png"/><p>Global Real Estate Advisor<br/>Four Seasons Sotheby's International Realty</p></div><div><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#areas">Communities</a><a href="index.html#contact">Contact</a></div><div><p>Northwest Vermont guidance with local roots and a modern, strategic approach.</p><p><a href="mailto:skyler.davis@fourseasonssir.com">skyler.davis@fourseasonssir.com</a><br/><a href="tel:+18023632356">Cell: +1 802.363.2356</a><br/><a href="tel:+18028640541">Office: +1 802.864.0541</a></p></div></div></footer></body></html>
