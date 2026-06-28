@@ -138,6 +138,19 @@ section{padding-top:86px;padding-bottom:86px;}
 
 /* Community page cleanup: remove portrait/photo treatment and format next-step links */
 .hero{background:radial-gradient(circle at 88% 8%,rgba(183,149,85,.20),transparent 30%),linear-gradient(135deg,#f7f1e6 0%,#fffaf0 56%,#e6efe3 100%)!important;color:var(--deep)!important;min-height:520px!important}.hero::after{display:none!important}.hero .eyebrow{color:var(--gold)!important}.hero h1{color:var(--deep)!important}.hero p:not(.eyebrow){color:#40504d!important}.about-grid{grid-template-columns:1fr!important;max-width:940px}.about-copy{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:36px;box-shadow:var(--shadow)}.portrait{display:none!important}.area-grid{grid-template-columns:.95fr 1.05fr;align-items:start}.area-grid .map-card{padding:34px}.area-grid .town-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin-top:0;padding-top:0}.area-grid .town-list a{display:flex;align-items:center;justify-content:center;text-align:center;border-radius:16px;min-height:50px;padding:13px 16px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 22px rgba(15,31,31,.06)}@media(max-width:900px){.area-grid{grid-template-columns:1fr}.about-copy{padding:26px}.hero{min-height:auto!important;padding:90px 0!important}}
+
+/* Cleaned hero right-side panel: no photo, no overlapping text */
+.brand span{display:flex;flex-direction:column;gap:0}
+.hero-no-photo{min-height:620px}
+.brand-visual-panel{inset:0 0 0 72px;display:flex;flex-direction:column;justify-content:space-between;padding:44px;overflow:hidden}
+.hero-panel-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;max-width:410px;z-index:2}
+.hero-panel-content span{margin-bottom:10px}
+.hero-panel-content strong{font-size:clamp(1.8rem,2.8vw,3rem);max-width:390px}
+.hero-panel-content p{max-width:360px}
+.hero-no-photo .profile-float{left:0;bottom:42px;width:min(400px,86%);z-index:4}
+.hero-watermark{right:38px;top:34px;width:min(190px,34%);opacity:.16}
+@media(max-width:900px){.brand-visual-panel{left:0;padding:34px}.hero-panel-content{bottom:auto;left:auto;right:auto}.hero-no-photo .profile-float{left:24px;right:24px;bottom:32px;width:auto}.hero-no-photo{min-height:540px}}
+@media(max-width:620px){.hero-no-photo{min-height:560px}.brand-visual-panel{padding:28px;border-radius:30px}.hero-panel-content strong{font-size:1.85rem}.hero-no-photo .profile-float{left:18px;right:18px;bottom:24px;padding:20px}.hero-watermark{width:132px;right:20px;top:20px}}
 </style></head><body><header><div class="wrap"><nav aria-label="Main navigation">
 <a aria-label="Skyler Davis home" class="brand" href="index.html"><img alt="Skyler Davis Group Real Estate logo mark" class="brand-logo" src="skyler-logo-mark.png"/><span class="brand-text"><span class="brand-name">Skyler Davis</span><span class="brand-sub">Real Estate</span></span></a>
 <div class="nav-links"><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#areas">Communities</a><a href="index.html#contact">Contact</a></div>

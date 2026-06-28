@@ -135,6 +135,19 @@ header{background:rgba(247,241,230,.9);backdrop-filter:blur(18px);}
 section{padding-top:86px;padding-bottom:86px;}
 .section-head h2,.hero h1,.page-hero h1{letter-spacing:-.045em!important;}
 .btn{box-shadow:0 14px 28px rgba(14,48,43,.16)!important;}
+
+/* Cleaned hero right-side panel: no photo, no overlapping text */
+.brand span{display:flex;flex-direction:column;gap:0}
+.hero-no-photo{min-height:620px}
+.brand-visual-panel{inset:0 0 0 72px;display:flex;flex-direction:column;justify-content:space-between;padding:44px;overflow:hidden}
+.hero-panel-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;max-width:410px;z-index:2}
+.hero-panel-content span{margin-bottom:10px}
+.hero-panel-content strong{font-size:clamp(1.8rem,2.8vw,3rem);max-width:390px}
+.hero-panel-content p{max-width:360px}
+.hero-no-photo .profile-float{left:0;bottom:42px;width:min(400px,86%);z-index:4}
+.hero-watermark{right:38px;top:34px;width:min(190px,34%);opacity:.16}
+@media(max-width:900px){.brand-visual-panel{left:0;padding:34px}.hero-panel-content{bottom:auto;left:auto;right:auto}.hero-no-photo .profile-float{left:24px;right:24px;bottom:32px;width:auto}.hero-no-photo{min-height:540px}}
+@media(max-width:620px){.hero-no-photo{min-height:560px}.brand-visual-panel{padding:28px;border-radius:30px}.hero-panel-content strong{font-size:1.85rem}.hero-no-photo .profile-float{left:18px;right:18px;bottom:24px;padding:20px}.hero-watermark{width:132px;right:20px;top:20px}}
 </style></head>
 <body><header><div class="wrap"><nav aria-label="Main navigation">
 <a aria-label="Skyler Davis home" class="brand" href="index.html"><img alt="Skyler Davis Group Real Estate logo mark" class="brand-logo" src="skyler-logo-mark.png"/><span class="brand-text"><span class="brand-name">Skyler Davis</span><span class="brand-sub">Real Estate</span></span></a>
