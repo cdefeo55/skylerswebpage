@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style> body { margin: 0; } </style>
+</helmet>
+<div style="font-family: 'Mulish', system-ui, sans-serif; color: #23271f; background: #f4ede1; line-height: 1.65; overflow-x: hidden;">
+
+  <dc-import name="SiteHeader" hint-size="100%,84px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background: #f4ede1; padding: clamp(64px, 8vw, 110px) 0 clamp(70px, 9vw, 120px);">
+    <div style="width: min(900px, calc(100% - 48px)); margin: 0 auto;">
+      <p style="margin: 0 0 20px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">{{ town.region }}</p>
+      <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2.8rem, 6.5vw, 5.4rem); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 28px;">{{ town.name }} Real Estate</h1>
+      <p style="color: #4a4f46; font-size: clamp(1.08rem, 1.7vw, 1.32rem); margin: 0 0 34px; max-width: 700px;">{{ town.lede }}</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="index.html#contact" style="text-decoration: none; background: #173129; color: #f4ede1; padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #b08d57; color: #fffdf8;">Talk About {{ town.name }}</a>
+        <a href="index.html#communities" style="text-decoration: none; background: transparent; color: #173129; border: 1px solid rgba(23,49,41,0.3); padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: .25s ease;" style-hover="border-color: #b08d57; color: #b08d57;">All Communities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section style="background: #fffdf8; padding: clamp(80px, 10vw, 130px) 0; border-top: 1px solid rgba(23,49,41,0.1);">
+    <div style="width: min(820px, calc(100% - 48px)); margin: 0 auto;">
+      <p style="margin: 0 0 18px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">Local Perspective</p>
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 30px;">{{ town.overviewTitle }}</h2>
+      <sc-for list="{{ town.overview }}" as="para" hint-placeholder-count="2">
+        <p style="color: #4a4f46; font-size: 1.1rem; margin: 0 0 22px;">{{ para }}</p>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- VALUE CARDS -->
+  <section style="background: #f4ede1; padding: clamp(80px, 10vw, 130px) 0;">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <div style="max-width: 660px; margin: 0 0 50px;">
+        <p style="margin: 0 0 18px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">What Shapes Value</p>
+        <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 3.8vw, 3.2rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0;">Details that matter in {{ town.name }}.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;">
+        <sc-for list="{{ town.cards }}" as="c" hint-placeholder-count="3">
+          <article style="background: #fffdf8; border: 1px solid rgba(23,49,41,0.1); border-radius: 3px; padding: 40px 34px;">
+            <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; color: #173129; font-size: 1.55rem; letter-spacing: -0.01em; margin: 0 0 12px;">{{ c.title }}</h3>
+            <p style="color: #5a5f55; font-size: 1.02rem; margin: 0;">{{ c.body }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER COMMUNITIES -->
+  <section style="background: #173129; padding: clamp(80px, 10vw, 120px) 0;">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #fffdf8; font-size: clamp(1.9rem, 3.6vw, 2.9rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 40px;">Explore other Vermont communities.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <sc-for list="{{ others }}" as="o" hint-placeholder-count="8">
+          <a href="{{ o.href }}" style="text-decoration: none; background: rgba(255,253,248,0.06); border: 1px solid rgba(255,253,248,0.22); color: #fffdf8; padding: 13px 22px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; transition: .25s ease;" style-hover="background: #b08d57; border-color: #b08d57;">{{ o.name }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="position: relative; background-image: url('lake-champlain.jpg'); background-size: cover; background-position: center 55%;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,32,27,0.78), rgba(14,32,27,0.62));"></div>
+    <div style="position: relative; z-index: 2; width: min(820px, calc(100% - 48px)); margin: 0 auto; padding: clamp(80px, 10vw, 130px) 0; text-align: center;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #fffdf8; font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 24px;">Buying or selling in {{ town.name }}?</h2>
+      <p style="color: rgba(255,253,248,0.85); font-size: 1.1rem; max-width: 560px; margin: 0 auto 36px;">Start with a clear, private conversation about your goals and what matters most in this market.</p>
+      <a href="index.html#contact" style="text-decoration: none; display: inline-block; background: #b08d57; color: #fffdf8; padding: 18px 44px; border-radius: 2px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #c9a877;">Contact Skyler</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;stowe&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;stowe&quot;,&quot;shelburne&quot;,&quot;charlotte&quot;,&quot;burlington&quot;,&quot;south-burlington&quot;,&quot;stratton&quot;,&quot;williston&quot;,&quot;jericho&quot;,&quot;richmond&quot;,&quot;hinesburg&quot;,&quot;colchester&quot;,&quot;winooski&quot;,&quot;essex&quot;],&quot;section&quot;:&quot;Community&quot;}}">
+const TOWNS = {
+  stowe: {
+    name: 'Stowe', region: 'Stowe \u00b7 Vermont',
+    lede: "One of Vermont's most recognized mountain markets, anchored by Mount Mansfield, a walkable village, and year-round recreation \u2014 where lifestyle and resort economics drive value together.",
+    overviewTitle: 'What to understand before you buy or sell in Stowe.',
+    overview: [
+      'Stowe is a lifestyle and resort market, which means buyers are often evaluating use as much as ownership. Mountain access, second-home logistics, rental potential, and long-term positioning all factor into the right decision.',
+      'I help clients read the market through that lens \u2014 weighing village proximity, views, privacy, ski access, and carrying costs against the scarcity of genuinely comparable homes.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Mount Mansfield, resort access, village charm, restaurants, trails, and four-season tourism that keeps second-home interest strong.' },
+      { title: 'Property lens', body: 'Resort-area homes require careful review of association documents, rental restrictions, property management, winter systems, and access.' },
+      { title: 'Due diligence', body: 'I look closely at heating systems, roof and snow-load, furnishings, permitting, and whether the home truly supports the intended use.' },
+    ],
+  },
+  shelburne: {
+    name: 'Shelburne', region: 'Shelburne \u00b7 Vermont',
+    lede: "A coveted lakeside town known for Shelburne Farms, the Museum, and estate properties set against Lake Champlain and open farm country just south of Burlington.",
+    overviewTitle: 'A blend of estate living and working landscape.',
+    overview: [
+      "Shelburne pairs some of the region's most distinctive estates with rolling agricultural land, lake frontage, and a strong sense of place. Buyers here often prioritize land, privacy, and proximity to Burlington.",
+      'Value is shaped by acreage, views, water access, and the character of the home \u2014 details that reward an advisor who knows how the area actually trades.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by lake access, large parcels, top schools, and the cultural draw of Shelburne Farms and the Shelburne Museum.' },
+      { title: 'Property lens', body: 'Estate and acreage properties call for review of land use, septic and well systems, outbuildings, and frontage rights.' },
+      { title: 'Due diligence', body: 'I examine surveys, easements, shoreline regulations, and the condition of older or architecturally significant homes.' },
+    ],
+  },
+  charlotte: {
+    name: 'Charlotte', region: 'Charlotte \u00b7 Vermont',
+    lede: "Rolling farmland, long lake and mountain views, and generous acreage make Charlotte one of Chittenden County's most sought-after rural-luxury markets.",
+    overviewTitle: 'Space, views, and a strong school district.',
+    overview: [
+      'Charlotte appeals to buyers who want land and privacy without giving up access to Burlington. Properties range from historic farmhouses to modern homes on significant acreage.',
+      'Pricing turns on view corridors, land quality, and proximity to the lake \u2014 along with the strength of the CVU school district that draws families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by acreage, panoramic views, lake access, and a school district families actively relocate for.' },
+      { title: 'Property lens', body: 'Rural properties require attention to wells, septic, agricultural use, and the condition of older structures.' },
+      { title: 'Due diligence', body: 'I review surveys, current-use enrollment, access, and the systems that older country homes depend on.' },
+    ],
+  },
+  burlington: {
+    name: 'Burlington', region: 'Burlington \u00b7 Vermont',
+    lede: "Vermont's largest city pairs a vibrant waterfront and downtown with historic neighborhoods \u2014 a market where walkability, character, and lake proximity command real premiums.",
+    overviewTitle: 'City living on Lake Champlain.',
+    overview: [
+      'From the Hill Section\u2019s historic homes to downtown condos and waterfront properties, Burlington offers a range few Vermont markets can match. Location, era, and condition all carry weight.',
+      'I help buyers and sellers understand neighborhood nuance \u2014 how proximity to the waterfront, Church Street, and UVM shapes both lifestyle and value.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Fueled by the waterfront, downtown culture, UVM and the medical center, and limited inventory in the most desirable neighborhoods.' },
+      { title: 'Property lens', body: 'Historic homes and condos require review of age, systems, rental rules, and association structures.' },
+      { title: 'Due diligence', body: 'I assess condition of older housing stock, zoning, short-term rental regulations, and renovation potential.' },
+    ],
+  },
+  'south-burlington': {
+    name: 'South Burlington', region: 'South Burlington \u00b7 Vermont',
+    lede: "Vermont's fast-growing second city offers established neighborhoods, newer construction, strong schools, and unmatched convenience to Burlington and the airport.",
+    overviewTitle: 'Convenience, schools, and steady demand.',
+    overview: [
+      'South Burlington draws buyers who want modern homes, amenities, and an easy commute. Inventory spans established subdivisions, new construction at City Center, and lake-adjacent pockets.',
+      'Value reflects neighborhood, age and condition, and proximity to schools, retail, and major routes \u2014 with consistently strong, broad-based demand.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by schools, retail, the airport, employment access, and ongoing investment in the City Center district.' },
+      { title: 'Property lens', body: 'A mix of eras means careful attention to updates, systems, HOA terms, and lot characteristics.' },
+      { title: 'Due diligence', body: 'I evaluate condition, energy efficiency, association rules, and how each home compares within its neighborhood.' },
+    ],
+  },
+  stratton: {
+    name: 'Stratton', region: 'Stratton \u00b7 Southern Vermont',
+    lede: "A premier southern-Vermont ski destination, Stratton centers on its mountain resort and village \u2014 a second-home market driven by access, amenities, and rental potential.",
+    overviewTitle: 'A resort market with its own logic.',
+    overview: [
+      'Stratton buyers weigh ski-in/ski-out access, village proximity, amenities, and rental flexibility. Ownership is often as much about use and convenience as long-term appreciation.',
+      'I help clients navigate association structures, seasonal access, and the tradeoffs that define resort ownership in southern Vermont.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by Stratton Mountain Resort, village amenities, golf and recreation, and steady second-home interest.' },
+      { title: 'Property lens', body: 'Condos and chalets require review of association rules, rental programs, fees, and management.' },
+      { title: 'Due diligence', body: 'I look at heating and snow systems, access roads, rental history, furnishings, and seasonal carrying costs.' },
+    ],
+  },
+  williston: {
+    name: 'Williston', region: 'Williston \u00b7 Vermont',
+    lede: "Williston combines new construction, established neighborhoods, and the convenience of Taft Corners \u2014 a practical, in-demand choice for buyers who value access.",
+    overviewTitle: 'Convenience and modern inventory.',
+    overview: [
+      'Williston is one of the area\u2019s most convenient towns, with retail, employment, and easy interstate access. Buyers find newer homes and well-kept established neighborhoods.',
+      'Value is shaped by neighborhood, age and condition, lot, and proximity to schools and services \u2014 with reliably strong demand from commuters and families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Taft Corners convenience, employment, interstate access, and a range of newer housing.' },
+      { title: 'Property lens', body: 'Newer subdivisions and HOAs require review of association terms, builder quality, and lot specifics.' },
+      { title: 'Due diligence', body: 'I assess condition, energy systems, association rules, and how a home is positioned within its neighborhood.' },
+    ],
+  },
+  jericho: {
+    name: 'Jericho', region: 'Jericho \u00b7 Vermont',
+    lede: "A quiet, scenic town in the shadow of Mount Mansfield, Jericho offers larger lots, rural character, and an easy connection to both Burlington and the mountains.",
+    overviewTitle: 'Rural character with mountain access.',
+    overview: [
+      'Jericho appeals to buyers who want space, privacy, and natural beauty while staying within reach of Burlington. Homes range from historic village properties to country homes on acreage.',
+      'Value reflects land, views, condition, and location \u2014 with the trails, recreation, and small-town character that define the area.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by mountain views, recreation, larger lots, and a quiet, established community feel.' },
+      { title: 'Property lens', body: 'Country and village homes require attention to wells, septic, heating systems, and access.' },
+      { title: 'Due diligence', body: 'I review surveys, systems, and the condition of older homes common throughout the town.' },
+    ],
+  },
+  richmond: {
+    name: 'Richmond', region: 'Richmond \u00b7 Vermont',
+    lede: "Set along the Winooski River between Burlington and the mountains, Richmond offers small-town charm, walkable amenities, and easy access in every direction.",
+    overviewTitle: 'Small-town charm, central location.',
+    overview: [
+      'Richmond combines a welcoming village, riverside setting, and a location that splits the difference between city and mountains. It draws buyers who want community and convenience.',
+      'Value reflects proximity to the village and interstate, lot and condition, and the character that makes the town distinct.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by the village, river access, recreation, and a central location with quick routes to Burlington and Stowe.' },
+      { title: 'Property lens', body: 'A mix of historic and newer homes calls for attention to systems, condition, and flood considerations near the river.' },
+      { title: 'Due diligence', body: 'I review condition, systems, flood zones where relevant, and how each home compares locally.' },
+    ],
+  },
+  hinesburg: {
+    name: 'Hinesburg', region: 'Hinesburg \u00b7 Vermont',
+    lede: "A growing community with open land, a friendly village, and the strong CVU school district \u2014 Hinesburg offers space and value within reach of Burlington.",
+    overviewTitle: 'Open land and a strong community.',
+    overview: [
+      'Hinesburg attracts buyers looking for land, a real sense of community, and access to a top school district. Inventory ranges from village homes to country properties on acreage.',
+      'Value reflects land, condition, and location relative to the village and commuting routes, with steady, family-driven demand.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by the CVU school district, open land, a growing village, and relative value compared with neighboring towns.' },
+      { title: 'Property lens', body: 'Rural and village homes require review of wells, septic, land use, and the condition of older structures.' },
+      { title: 'Due diligence', body: 'I examine surveys, systems, current-use status, and access for properties on acreage.' },
+    ],
+  },
+  colchester: {
+    name: 'Colchester', region: 'Colchester \u00b7 Vermont',
+    lede: "With extensive Lake Champlain shoreline around Malletts Bay, Colchester pairs waterfront living and beaches with established family neighborhoods and convenient access.",
+    overviewTitle: 'Lake living with everyday convenience.',
+    overview: [
+      'Colchester offers a rare combination of shoreline, recreation, and convenience. Buyers range from those seeking waterfront and seasonal camps to families in established neighborhoods.',
+      'Value turns on water access and frontage, neighborhood, condition, and proximity to the interstate, the bay, and Burlington.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Malletts Bay, beaches, boating, and a wide range of housing from waterfront to family neighborhoods.' },
+      { title: 'Property lens', body: 'Waterfront and seasonal properties require review of frontage, shoreline rules, septic, and winterization.' },
+      { title: 'Due diligence', body: 'I assess shoreline regulations, water and septic systems, flood considerations, and seasonal-to-year-round conversions.' },
+    ],
+  },
+  essex: {
+    name: 'Essex', region: 'Essex \u00b7 Vermont',
+    lede: "Essex and Essex Junction offer established neighborhoods, strong schools, and everyday convenience \u2014 a practical, family-friendly market with good value near Burlington.",
+    overviewTitle: 'Family-friendly, convenient, and well-rounded.',
+    overview: [
+      'Essex draws buyers who want established neighborhoods, amenities, and an easy commute. Inventory spans village homes near the Junction, subdivisions, and properties with more land toward the town\u2019s edges.',
+      'Value reflects neighborhood, schools, condition, and proximity to employment and services \u2014 with steady, broad-based demand from families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by schools, major employers, retail and dining at the Junction, and a wide range of housing at relative value.' },
+      { title: 'Property lens', body: 'A mix of eras means attention to updates, systems, lot characteristics, and any association terms.' },
+      { title: 'Due diligence', body: 'I evaluate condition, energy efficiency, and how each home compares within its neighborhood and price point.' },
+    ],
+  },
+  winooski: {
+    name: 'Winooski', region: 'Winooski \u00b7 Vermont',
+    lede: "Vermont's most walkable small city, Winooski has transformed its historic mill district into a vibrant, amenity-rich downtown with strong rental and ownership demand.",
+    overviewTitle: 'Walkable, revitalized, and in demand.',
+    overview: [
+      'Winooski packs restaurants, culture, and convenience into a compact, walkable footprint. Inventory leans toward condos, converted mill buildings, and close-in homes.',
+      'Value reflects walkability, condition, rental potential, and proximity to the downtown circle and Burlington just across the river.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Fueled by walkability, dining and culture, proximity to Burlington, and strong interest from younger buyers and investors.' },
+      { title: 'Property lens', body: 'Condos and converted buildings require review of association structures, rental rules, and building systems.' },
+      { title: 'Due diligence', body: 'I evaluate association documents, short-term rental regulations, condition, and parking where it matters.' },
+    ],
+  },
+};
+
+const ALL = [
+  ['stowe', 'Stowe'], ['shelburne', 'Shelburne'], ['charlotte', 'Charlotte'], ['burlington', 'Burlington'],
+  ['south-burlington', 'South Burlington'], ['stratton', 'Stratton'], ['williston', 'Williston'], ['jericho', 'Jericho'],
+  ['richmond', 'Richmond'], ['hinesburg', 'Hinesburg'], ['colchester', 'Colchester'], ['winooski', 'Winooski'], ['essex', 'Essex'],
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const slug = this.props.slug || 'stowe';
+    const town = TOWNS[slug] || TOWNS.stowe;
+    const others = ALL.filter(([s]) => s !== slug).map(([s, name]) => ({ name, href: s + '-vt-real-estate.html' }));
+    return { town, others };
+  }
+}
+</script>
+</body>
+</html>

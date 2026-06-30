@@ -1,184 +1,28 @@
 <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="favicon.png?v=6" rel="icon" type="image/png"/><link href="favicon.ico?v=6" rel="shortcut icon"/><link href="apple-touch-icon.png?v=6" rel="apple-touch-icon"/>
-<meta content="#0f2f2e" name="theme-color"/><title>Burlington VT Real Estate | Skyler Davis</title><meta content="Real estate guidance for Burlington, VT buyers and sellers, with local insight on neighborhoods, older homes, lake access, walkability, pricing, and market strategy." name="description"/><meta content="Skyler Davis real estate, Vermont real estate advisor, Burlington VT real estate, Lake Champlain homes, Chittenden County real estate, Stowe real estate, Vermont relocation real estate, Four Seasons Sotheby's International Realty" name="keywords"/><meta content="Skyler Davis" name="author"/><meta content="index, follow" name="robots"/><link href="https://skylerdavisgroup.com/burlington-vt-real-estate.html" rel="canonical"/>
-<meta content="website" property="og:type"/><meta content="Burlington VT Real Estate | Skyler Davis" property="og:title"/><meta content="Local real estate guidance for Burlington, Vermont buyers and sellers, from lakefront and downtown access to historic-home preparation and pricing strategy." property="og:description"/><meta content="skyler.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Burlington VT Real Estate | Skyler Davis" name="twitter:title"/><meta content="Local real estate guidance for Burlington, Vermont buyers and sellers, from lakefront and downtown access to historic-home preparation and pricing strategy." name="twitter:description"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Skyler Davis","jobTitle":"Global Real Estate Advisor","url":"https://skylerdavisgroup.com/","image":"https://skylerdavisgroup.com/skyler-headshot.jpg","telephone":"+1 802.363.2356","email":"skyler.davis@fourseasonssir.com","worksFor":{"@type":"RealEstateAgent","name":"Four Seasons Sotheby's International Realty"},"address":{"@type":"PostalAddress","addressLocality":"Burlington","addressRegion":"VT","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Burlington, VT"},{"@type":"City","name":"South Burlington, VT"},{"@type":"City","name":"Jericho, VT"},{"@type":"AdministrativeArea","name":"Chittenden County, VT"},{"@type":"City","name":"Stowe, VT"},{"@type":"Place","name":"Lake Champlain"},{"@type":"AdministrativeArea","name":"Vermont"}],"knowsAbout":["Vermont real estate","Lake Champlain homes","Chittenden County residential sales","Relocation","Strategic pricing","Negotiation","Mountain and vacation properties"]}</script>
-<style>
-    :root {
-      --ink: #0f1f1f;
-      --deep: #12352f;
-      --green: #2f5f3a;
-      --lake: #4d7f91;
-      --cream: #f7f1e6;
-      --sand: #e5d2b3;
-      --white: #ffffff;
-      --muted: #677371;
-      --line: rgba(15, 47, 46, .14);
-      --shadow: 0 22px 55px rgba(15, 31, 31, .14);
-      --radius: 24px;
-      --max: 1180px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .wrap { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
-    header { position: sticky; top: 0; z-index: 10; background: rgba(246, 241, 231, .94); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
-    nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 24px; }
-    .brand { display: flex; align-items: center; gap: 10px; line-height: 1; min-width: 215px; }
-    .brand-logo { width: 58px; height: auto; }
-    .brand-text { display: grid; gap: 3px; }
-    .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; color: var(--deep); }
-    .brand-sub { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
-    .nav-links { display: flex; gap: 20px; align-items: center; font-size: .92rem; color: #30413f; font-weight: 700; }
-    .nav-links a:hover { color: var(--green); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 18px; border-radius: 999px; background: var(--deep); color: var(--white); font-weight: 800; box-shadow: 0 10px 22px rgba(18, 53, 47, .18); transition: .2s ease; }
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 26px rgba(18, 53, 47, .22); }
-    .btn.secondary { background: transparent; color: var(--deep); border: 1px solid var(--line); box-shadow: none; }
-    .hero { position: relative; overflow: hidden; min-height: 690px; display: grid; align-items: center; background: linear-gradient(135deg,#f7f1e6,#e6efe3); color: var(--deep); }
-    .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(15,31,31,.75), rgba(15,31,31,.25), rgba(15,31,31,.68)); pointer-events:none; }
-    .hero .wrap { position: relative; z-index: 1; }
-    .hero-grid { display: grid; grid-template-columns: 1.05fr .75fr; gap: 44px; align-items: end; }
-    .single-hero { grid-template-columns: minmax(0, 820px); align-items:center; }
-    .eyebrow { margin: 0 0 14px; color: var(--green); text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; font-weight: 900; }
-    .hero .eyebrow, .valuation .eyebrow { color: #e7d3ad; }
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; line-height: 1.04; margin: 0; color: var(--deep); }
-    h1 { color: var(--white); font-size: clamp(3rem, 6.3vw, 6.4rem); letter-spacing: -.05em; max-width: 900px; }
-    h2 { font-size: clamp(2.1rem, 4.6vw, 4.35rem); letter-spacing: -.04em; max-width: 850px; }
-    h3 { font-size: 1.45rem; letter-spacing: -.02em; }
-    p { margin: 0 0 18px; }
-    .hero p:not(.eyebrow) { font-size: clamp(1.05rem, 1.8vw, 1.28rem); color: rgba(255,255,255,.86); max-width: 690px; }
-    .hero-actions { display:flex; gap: 14px; flex-wrap:wrap; margin-top: 28px; }
-    .hero-card { background: rgba(247,241,230,.94); color: var(--ink); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.35); }
-    .hero-card .label { display:block; color: var(--green); text-transform: uppercase; font-weight: 900; letter-spacing:.16em; font-size:.75rem; margin-bottom: 10px; }
-    .hero-card strong { display:block; font-family: Georgia, serif; color: var(--deep); font-size: 2rem; line-height: 1.15; letter-spacing:-.03em; margin-bottom: 12px; }
-    .hero .hero-card p { color: #30413f; margin:0; font-size:1rem; }
-    section { padding: 96px 0; }
-    .stats { margin-top: -48px; position: relative; z-index: 2; }
-    .stats-grid { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; box-shadow: var(--shadow); }
-    .stat { padding: 26px 28px; border-right: 1px solid var(--line); }
-    .stat:last-child { border-right:0; }
-    .stat-num { display:block; font-family: Georgia, serif; font-size: 1.55rem; color: var(--deep); margin-bottom: 7px; }
-    .stat-label { color: var(--muted); font-size:.98rem; }
-    .about-grid { display:grid; grid-template-columns: .8fr 1.2fr; gap: 54px; align-items:center; }
-    .portrait { min-height: 560px; border-radius: var(--radius); background: linear-gradient(135deg,#e6efe3,#fffaf0); box-shadow: var(--shadow); }
-    .about-copy p { color: var(--muted); font-size: 1.06rem; }
-    .section-head { max-width: 860px; margin-bottom: 34px; }
-    .section-head .eyebrow { margin-bottom: 12px; }
-    .section-head p:not(.eyebrow) { color: var(--muted); font-size: 1.08rem; max-width: 780px; margin-top: 18px; }
-    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: 0 14px 35px rgba(15,31,31,.07); }
-    .card p { color: var(--muted); margin: 12px 0 0; }
-    .areas { background: #fbf8f1; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .area-grid { display:grid; grid-template-columns: .9fr 1.1fr; gap: 34px; align-items: stretch; }
-    .areas .section-head { max-width:none; margin-bottom:0; padding: 34px; border-radius: var(--radius); background: rgba(255,255,255,.76); border:1px solid var(--line); box-shadow: 0 14px 35px rgba(15,31,31,.06); }
-    .areas .section-head p:not(.eyebrow) { margin-top: 18px; margin-bottom: 0; max-width: 670px; }
-    .town-list { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 30px; padding-top: 8px; }
-    .town-list a { padding: 10px 14px; background: var(--white); border: 1px solid var(--line); border-radius: 999px; color: var(--deep); font-weight: 800; box-shadow: 0 8px 18px rgba(15,31,31,.05); }
-    .map-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; min-height: 100%; box-shadow: var(--shadow); display:flex; flex-direction:column; gap: 18px; justify-content:space-between; }
-    .map-visual { border-radius: 20px; overflow:hidden; background: #f7f2e6; border: 1px solid rgba(15,47,46,.12); }
-    .map-visual svg { display:block; width:100%; height:auto; }
-    .map-title { font-family: Georgia, serif; fill: #0f2f2e; letter-spacing: -.02em; }
-    .map-subtitle { fill:#66736f; font-style: italic; }
-    .map-label { font-family: Inter, Arial, sans-serif; fill:#0f2f2e; font-size:17px; font-weight:900; paint-order: stroke; stroke:#f7f2e6; stroke-width:5px; stroke-linejoin:round; }
-    .map-small { font-family: Inter, Arial, sans-serif; fill:#6c7b75; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
-    .map-town-dot { fill:#0f2f2e; stroke:#d7b46a; stroke-width:4; }
-    .map-town-dot-inner { fill:#f7f2e6; }
-    .map-card > p { color: var(--muted); margin: 0; padding: 0 4px 4px; }
-    .sales-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
-    .sale { overflow:hidden; border-radius:var(--radius); border:1px solid var(--line); background:var(--white); box-shadow:0 14px 35px rgba(15,31,31,.07); }
-    .sale-image { min-height: 190px; background: linear-gradient(135deg, rgba(15,47,46,.12), rgba(81,124,137,.24)); display:grid; place-items:center; color:var(--green); font-weight:900; text-transform:uppercase; letter-spacing:.12em; }
-    .sale-body { padding:22px; }
-    .sale-location { margin:0 0 6px; color:var(--muted); font-size:.9rem; }
-    .sale h3 { margin-bottom:8px; }
-    .sale-price { color:var(--green); font-weight:900; margin:0; }
-    .valuation { background:var(--deep); color:var(--white); text-align:center; }
-    .valuation h2 { color:var(--white); margin:0 auto; }
-    .valuation p { color:rgba(255,255,255,.8); max-width:760px; margin:18px auto 28px; font-size:1.08rem; }
-    .valuation .btn { background:#e7d3ad; color:var(--deep); box-shadow:none; }
-    .quote { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:34px; box-shadow:var(--shadow); max-width:920px; }
-    .quote p { font-family:Georgia, serif; font-size:clamp(1.35rem, 2.5vw, 2.05rem); color:var(--deep); line-height:1.35; margin:0; }
-    .quote strong { display:block; margin-top:18px; color:var(--muted); }
-    .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-    details { background:var(--white); border:1px solid var(--line); border-radius:18px; padding:20px; }
-    summary { cursor:pointer; font-weight:900; color:var(--deep); }
-    details p { color:var(--muted); margin-bottom:0; }
-    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:38px; align-items:start; }
-    .contact-card { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
-    .contact-card a, .contact-card span { display:block; padding:16px 0; border-bottom:1px solid var(--line); color:var(--deep); font-weight:850; }
-    .contact-card a:last-child, .contact-card span:last-child { border-bottom:0; }
-    .contact-note { color: var(--muted); margin-top: 16px; }
-    footer { padding:38px 0; border-top:1px solid var(--line); color:var(--muted); }
-    .footer-logo { width:220px; height:auto; margin-bottom:12px; }
-    .footer-grid { display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center; }
-    .footer-grid a { display:block; margin-bottom:8px; font-weight:800; color:var(--deep); }
-    @media (max-width: 900px) {
-      .nav-links { display:none; }
-      .hero { min-height:auto; padding: 96px 0; }
-      h1 { font-size: clamp(2.6rem, 11vw, 4.2rem); }
-      .hero-grid, .about-grid, .area-grid, .contact-grid { grid-template-columns:1fr; }
-      .stats-grid, .cards, .sales-grid, .faq-grid { grid-template-columns:1fr; }
-      .stat { border-right:0; border-bottom:1px solid var(--line); }
-      .stat:last-child { border-bottom:0; }
-      .portrait { min-height: 420px; }
-      section { padding:70px 0; }
-    }
-
-/* Premium layout refinements */
-body{background:#f7f1e6;}
-header{background:rgba(247,241,230,.9);backdrop-filter:blur(18px);}
-.hero,.page-hero{background:radial-gradient(circle at 88% 8%,rgba(183,149,85,.22),transparent 30%),linear-gradient(135deg,#f7f1e6 0%,#fffaf0 52%,#e6efe3 100%);position:relative;overflow:hidden;}
-.hero:before,.page-hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(14,48,43,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(14,48,43,.04) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 72%);pointer-events:none;}
-.hero .wrap,.page-hero .wrap{position:relative;z-index:1;}
-.card,.contact-card,.quote,details{border-radius:28px!important;box-shadow:0 18px 50px rgba(12,29,27,.08)!important;}
-section{padding-top:86px;padding-bottom:86px;}
-.section-head h2,.hero h1,.page-hero h1{letter-spacing:-.045em!important;}
-.btn{box-shadow:0 14px 28px rgba(14,48,43,.16)!important;}
-
-/* Community page cleanup: remove portrait/photo treatment and format next-step links */
-.hero{background:radial-gradient(circle at 88% 8%,rgba(183,149,85,.20),transparent 30%),linear-gradient(135deg,#f7f1e6 0%,#fffaf0 56%,#e6efe3 100%)!important;color:var(--deep)!important;min-height:520px!important}.hero::after{display:none!important}.hero .eyebrow{color:var(--gold)!important}.hero h1{color:var(--deep)!important}.hero p:not(.eyebrow){color:#40504d!important}.about-grid{grid-template-columns:1fr!important;max-width:940px}.about-copy{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:36px;box-shadow:var(--shadow)}.portrait{display:none!important}.area-grid{grid-template-columns:.95fr 1.05fr;align-items:start}.area-grid .map-card{padding:34px}.area-grid .town-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin-top:0;padding-top:0}.area-grid .town-list a{display:flex;align-items:center;justify-content:center;text-align:center;border-radius:16px;min-height:50px;padding:13px 16px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 22px rgba(15,31,31,.06)}@media(max-width:900px){.area-grid{grid-template-columns:1fr}.about-copy{padding:26px}.hero{min-height:auto!important;padding:90px 0!important}}
-
-/* Cleaned hero right-side panel: no photo, no overlapping text */
-.brand span{display:flex;flex-direction:column;gap:0}
-.hero-no-photo{min-height:620px}
-.brand-visual-panel{inset:0 0 0 72px;display:flex;flex-direction:column;justify-content:space-between;padding:44px;overflow:hidden}
-.hero-panel-content{position:relative;left:auto;right:auto;bottom:auto;top:auto;max-width:410px;z-index:2}
-.hero-panel-content span{margin-bottom:10px}
-.hero-panel-content strong{font-size:clamp(1.8rem,2.8vw,3rem);max-width:390px}
-.hero-panel-content p{max-width:360px}
-.hero-no-photo .profile-float{left:0;bottom:42px;width:min(400px,86%);z-index:4}
-.hero-watermark{right:38px;top:34px;width:min(190px,34%);opacity:.16}
-@media(max-width:900px){.brand-visual-panel{left:0;padding:34px}.hero-panel-content{bottom:auto;left:auto;right:auto}.hero-no-photo .profile-float{left:24px;right:24px;bottom:32px;width:auto}.hero-no-photo{min-height:540px}}
-@media(max-width:620px){.hero-no-photo{min-height:560px}.brand-visual-panel{padding:28px;border-radius:30px}.hero-panel-content strong{font-size:1.85rem}.hero-no-photo .profile-float{left:18px;right:18px;bottom:24px;padding:20px}.hero-watermark{width:132px;right:20px;top:20px}}
-</style><!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7WMCB28YDX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WMCB28YDX');
-</script>
-</head><body><header><div class="wrap"><nav aria-label="Main navigation">
-<a aria-label="Skyler Davis home" class="brand" href="index.html"><img alt="Skyler Davis Group Real Estate logo mark" class="brand-logo" src="skyler-logo-mark.png"/><span class="brand-text"><span class="brand-name">Skyler Davis</span><span class="brand-sub">Real Estate</span></span></a>
-<div class="nav-links"><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#areas">Communities</a><a href="preparing-your-home.html">Seller Checklist</a><a href="index.html#contact">Contact</a></div>
-<a class="btn" href="index.html#contact">Contact Me</a>
-</nav></div></header><main id="top">
-<section class="hero"><div class="wrap hero-grid single-hero"><div><p class="eyebrow">Burlington Vermont Real Estate</p><h1>Burlington VT Real Estate</h1><p>Burlington is Vermont’s most urban residential market, with Lake Champlain, the waterfront, Church Street, UVM, restaurants, bike access, historic homes, and neighborhood walkability all shaping demand. The market can vary meaningfully from the Hill Section to the Old North End, South End, New North End, waterfront-adjacent pockets, and streets close to downtown.</p><div class="hero-actions"><a class="btn" href="index.html#contact">Talk with me about Burlington</a><a class="btn secondary" href="index.html#valuation">Request a valuation</a></div></div></div></section>
-<section><div class="wrap about-grid"><div class="about-copy"><p class="eyebrow">Local perspective</p><h2>What to understand before you buy or sell in Burlington.</h2><p>Burlington is Vermont’s most urban residential market, with Lake Champlain, the waterfront, Church Street, UVM, restaurants, bike access, historic homes, and neighborhood walkability all shaping demand. The market can vary meaningfully from the Hill Section to the Old North End, South End, New North End, waterfront-adjacent pockets, and streets close to downtown.</p><p>In Burlington, structure matters because buyers may be weighing downtown access, UVM and medical-center proximity, parking, older-home maintenance, and lake-oriented lifestyle in the same decision. I help clients separate what is emotional from what is material so the next step is grounded and defensible.</p><div class="hero-actions"><a class="btn" href="about.html">About Skyler</a><a class="btn secondary" href="index.html#contact">Contact me</a></div></div></div></section>
-<section class="areas"><div class="wrap"><div class="section-head"><p class="eyebrow">Market strategy</p><h2>Buyer and seller guidance.</h2><p>Buyers should think carefully about neighborhood fit, parking, renovation scope, walkability, proximity to campus or downtown, lake access, and how older housing systems affect long-term cost.</p></div><div class="cards"><article class="card"><h3>Buyer lens</h3><p>Buyers should think carefully about neighborhood fit, parking, renovation scope, walkability, proximity to campus or downtown, lake access, and how older housing systems affect long-term cost.</p></article><article class="card"><h3>Seller lens</h3><p>Sellers benefit from emphasizing the right story: architectural character, energy improvements, rental flexibility, outdoor space, lake orientation, walkability, or proximity to Burlington’s strongest daily-life anchors. A strong launch strategy also looks at what can be controlled before the home reaches the market: price, presentation, access, condition, terms, and the specific story that will make the property stand out to the right buyers.</p></article><article class="card"><h3>Negotiation lens</h3><p>In a city market, a clean offer or listing strategy often depends on more than price. Parking, inspection scope, rental history, closing flexibility, financing strength, and the way a property’s condition is documented can all change leverage.</p></article></div></div></section>
-<section><div class="wrap"><div class="section-head"><p class="eyebrow">Community notes</p><h2>Details that shape value in Burlington.</h2><p>Burlington has its own market logic. I look at the lifestyle drivers, property details, and buyer motivations that make this community distinct instead of relying on generic Vermont averages.</p></div><div class="cards"><article class="card"><h3>Local demand</h3><p>Lake Champlain, the Burlington waterfront, Church Street, UVM, medical-center access, and the city’s restaurant and arts scene create demand that is difficult to replicate elsewhere in Vermont.</p></article><article class="card"><h3>Property lens</h3><p>Many Burlington homes carry charm and history, but condition matters. Roofs, insulation, windows, foundations, heating systems, parking, permits, and layout are central to valuation.</p></article><article class="card"><h3>Due diligence</h3><p>For Burlington homes, I pay close attention to age, systems, permits, heating, insulation, roof life, basement conditions, parking, rental limitations, and how the neighborhood will function day to day.</p></article></div></div></section>
-<section class="areas"><div class="wrap"><div class="section-head"><p class="eyebrow">Lifestyle fit</p><h2>Who Burlington tends to work well for.</h2><p>Burlington works well for buyers who want a more connected, walkable Vermont lifestyle with access to restaurants, music, the lake, employers, healthcare, and outdoor recreation.</p></div><div class="cards"><article class="card"><h3>Best-fit buyers</h3><p>Burlington works well for buyers who want a more connected, walkable Vermont lifestyle with access to restaurants, music, the lake, employers, healthcare, and outdoor recreation.</p></article><article class="card"><h3>Questions to ask</h3><p>Will daily life center around the waterfront, Church Street, campus, the hospital, the South End, or a quieter residential street? The answer should shape how you weigh walkability, parking, condition, and long-term resale.</p></article><article class="card"><h3>Pricing approach</h3><p>Burlington pricing needs neighborhood-level judgment. A Hill Section home, New North End property, South End condo, or lake-influenced address may attract very different buyer pools even when the square footage looks similar.</p></article></div></div></section>
-<section class="areas"><div class="wrap"><div class="section-head"><p class="eyebrow">Seller preparation</p><h2>Preparing a Burlington home for market.</h2><p>Before listing in Burlington, I focus on clarity: make parking, storage, mechanical systems, permits, rental history, energy improvements, and outdoor space easy for buyers to understand. In an older city housing stock, confidence often comes from preparation and documentation.</p></div><div class="cards"><article class="card"><h3>Control the controllable</h3><p>The best Burlington launches make the home feel organized from the first showing. That means addressing small repairs, preparing utility and permit details, cleaning up exterior spaces, and deciding which character features should lead the story.</p></article><article class="card"><h3>Make the first impression count</h3><p>Buyers notice light, entry sequence, kitchen function, bathroom condition, basement usability, and parking almost immediately. Thoughtful staging and simple organization help them see the home instead of the maintenance list.</p></article><article class="card"><h3>Price with the market, not emotion</h3><p>Pricing in Burlington should reflect neighborhood demand, condition, walkability, parking, comparable age and style, and the inventory buyers are actively comparing that week.</p></article></div></div></section>
-<section><div class="wrap area-grid"><div class="map-card"><div><p class="eyebrow">Next steps</p><h2>Compare Vermont communities.</h2><p>Learn more about my background, request a valuation, or compare Burlington with other Vermont markets.</p></div></div><div class="town-list"><a href="about.html">About</a><a href="index.html#contact">Contact</a><a href="index.html#valuation">Home Valuation</a><a href="south-burlington-vt-real-estate.html">South Burlington</a><a href="winooski-vt-real-estate.html">Winooski</a><a href="colchester-vt-real-estate.html">Colchester</a><a href="shelburne-vt-real-estate.html">Shelburne</a><a href="jericho-vt-real-estate.html">Jericho</a><a href="charlotte-vt-real-estate.html">Charlotte</a><a href="essex-vt-real-estate.html">Essex</a><a href="stowe-vt-real-estate.html">Stowe</a><a href="richmond-vt-real-estate.html">Richmond</a><a href="williston-vt-real-estate.html">Williston</a><a href="hinesburg-vt-real-estate.html">Hinesburg</a><a href="stratton-vt-real-estate.html">Stratton</a></div></div></section>
-<section class="valuation"><div class="wrap valuation-inner"><div><p class="eyebrow">Private conversation</p><h2>Buying or selling in Burlington?</h2><p>Start with a conversation about the Burlington neighborhood, the property’s condition, your timeline, and the tradeoffs that matter most for your next move.</p></div><a class="btn" href="index.html#contact">Contact me</a></div></section>
-</main><footer><div class="wrap footer-grid"><div><img alt="Skyler Davis Group Real Estate logo" class="footer-logo" src="skyler-logo-horizontal.png"/><p>Global Real Estate Advisor<br/>Four Seasons Sotheby's International Realty</p></div><div><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#areas">Communities</a><a href="preparing-your-home.html">Seller Checklist</a><a href="index.html#contact">Contact</a></div><div><p>Vermont guidance with local roots, business discipline, and a modern advisory approach.</p><p><a href="mailto:skyler.davis@fourseasonssir.com">skyler.davis@fourseasonssir.com</a><br/><a href="tel:+18023632356">Cell: +1 802.363.2356</a><br/><a href="tel:+18028640541">Office: +1 802.864.0541</a></p></div></div></footer><script>
-(function () {
-  if (window.location.pathname !== "/" && window.history && window.history.replaceState) {
-    window.history.replaceState({}, document.title, "/");
-  }
-})();
-</script></body></html>
+<title>Burlington VT Real Estate | Skyler Davis</title>
+<meta name="description" content="Explore Burlington VT real estate with Skyler Davis, including waterfront homes, historic neighborhoods, condos, and city living near Lake Champlain.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://skylerdavisgroup.com/burlington-vt-real-estate.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Burlington VT Real Estate | Skyler Davis">
+<meta property="og:description" content="Explore Burlington VT real estate with Skyler Davis, including waterfront homes, historic neighborhoods, condos, and city living near Lake Champlain.">
+<meta property="og:url" content="https://skylerdavisgroup.com/burlington-vt-real-estate.html">
+<meta property="og:image" content="https://skylerdavisgroup.com/skyler.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Burlington VT Real Estate | Skyler Davis">
+<meta name="twitter:description" content="Explore Burlington VT real estate with Skyler Davis, including waterfront homes, historic neighborhoods, condos, and city living near Lake Champlain.">
+<meta name="twitter:image" content="https://skylerdavisgroup.com/skyler.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Skyler Davis","url":"https://skylerdavisgroup.com/","image":"https://skylerdavisgroup.com/skyler.jpg","telephone":"+1-802-363-2356","email":"skyler.davis@fourseasonssir.com","areaServed":"Burlington, Vermont","worksFor":{"@type":"RealEstateAgent","name":"Four Seasons Sotheby's International Realty"}}</script>
+</head>
+<body>
+<x-dc>
+<dc-import name="Community" slug="burlington" hint-size="100%,100%"></dc-import>
+</x-dc>
+</body>
+</html>
