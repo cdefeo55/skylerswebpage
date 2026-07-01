@@ -17,6 +17,22 @@
 <meta name="twitter:image" content="https://skylerdavisgroup.com/skyler.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "Skyler Davis", "url": "https://skylerdavisgroup.com/", "image": "https://skylerdavisgroup.com/skyler.jpg", "telephone": "+1-802-363-2356", "email": "skyler.davis@fourseasonssir.com", "address": {"@type": "PostalAddress", "addressRegion": "VT", "addressCountry": "US"}, "areaServed": ["Vermont", "Stowe VT", "Shelburne VT", "Charlotte VT", "Burlington VT", "South Burlington VT", "Stratton VT", "Williston VT", "Jericho VT", "Richmond VT", "Hinesburg VT", "Colchester VT", "Winooski VT", "Essex VT"], "worksFor": {"@type": "Organization", "name": "Four Seasons Sotheby’s International Realty"}}</script>
 
+<style data-mobile-form-fix>
+  *, *::before, *::after { box-sizing: border-box; }
+  input, select, textarea, button { max-width: 100%; min-width: 0; }
+
+  @media (max-width: 640px) {
+    #contact { padding: 64px 0 76px !important; }
+    #contact > div { width: min(100% - 32px, 1240px) !important; gap: 32px !important; }
+    #contact [data-contact-column] { flex: 1 1 100% !important; min-width: 0 !important; width: 100% !important; }
+    #contact form { width: 100% !important; padding: 24px 18px !important; gap: 16px !important; box-shadow: 0 18px 42px rgba(14,32,27,0.08) !important; }
+    #contact form > div { grid-template-columns: 1fr !important; gap: 16px !important; }
+    #contact input, #contact select, #contact textarea { width: 100% !important; }
+    #contact a[href^="mailto:"] { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; word-break: break-word; }
+    #contact button { width: 100% !important; white-space: normal !important; line-height: 1.35 !important; }
+  }
+</style>
+
 <script src="./support.js"></script>
 </head>
 <body>
@@ -185,7 +201,7 @@
     <!-- CONTACT -->
     <section id="contact" style="background: #f4ede1; padding: clamp(80px, 10vw, 130px) 0;">
       <div style="width: min(1240px, calc(100% - 48px)); margin: 0 auto; display: flex; gap: clamp(40px, 6vw, 80px); flex-wrap: wrap; align-items: flex-start;">
-        <div style="flex: 1 1 340px; min-width: 300px;" data-reveal>
+        <div data-contact-column style="flex: 1 1 340px; min-width: 300px;" data-reveal>
           <p style="margin: 0 0 18px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">Get in Touch</p>
           <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.04; letter-spacing: -0.02em; margin: 0 0 24px;">Let's talk about your next move.</h2>
           <p style="color: #4a4f46; font-size: 1.06rem; margin: 0 0 36px; max-width: 420px;">Whether you're buying, selling, or simply exploring the market, reach out for a private, no-obligation conversation.</p>
@@ -196,8 +212,8 @@
           </div>
         </div>
 
-        <div style="flex: 1 1 420px; min-width: 320px;" data-reveal>
-          <form action="https://formsubmit.co/skyler.davis@fourseasonssir.com" method="POST" style="background: #fffdf8; border: 1px solid rgba(23,49,41,0.1); border-radius: 3px; padding: clamp(28px, 4vw, 44px); display: grid; gap: 18px; box-shadow: 0 24px 60px rgba(14,32,27,0.08);">
+        <div data-contact-column style="flex: 1 1 420px; min-width: 0;" data-reveal>
+          <form action="https://formsubmit.co/skyler.davis@fourseasonssir.com" method="POST" style="width: 100%; box-sizing: border-box; background: #fffdf8; border: 1px solid rgba(23,49,41,0.1); border-radius: 3px; padding: clamp(28px, 4vw, 44px); display: grid; gap: 18px; box-shadow: 0 24px 60px rgba(14,32,27,0.08);">
             <input type="text" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
