@@ -37,6 +37,58 @@
   }
 </style>
 
+<style data-mobile-header-polish>
+  @media (max-width: 760px) {
+    .site-header { position: sticky !important; top: 0 !important; }
+    .site-nav {
+      width: min(100% - 28px, 1240px) !important;
+      min-height: auto !important;
+      padding: 12px 0 14px !important;
+      gap: 12px !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .site-brand {
+      width: 100% !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding-top: 4px !important;
+    }
+    .site-brand-main { gap: 10px !important; }
+    .site-brand-main img { width: 38px !important; }
+    .site-brand-name { font-size: 1rem !important; letter-spacing: 0.18em !important; }
+    .site-broker-link { font-size: 0.54rem !important; letter-spacing: 0.22em !important; margin-top: 4px !important; }
+    .site-menu {
+      width: 100% !important;
+      justify-content: center !important;
+      gap: 8px 10px !important;
+      flex-wrap: wrap !important;
+    }
+    .site-menu a {
+      font-size: 0.66rem !important;
+      letter-spacing: 0.07em !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+    }
+    .site-menu a.site-menu-cta {
+      padding: 10px 13px !important;
+      min-height: 36px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+  @media (max-width: 390px) {
+    .site-nav { width: min(100% - 22px, 1240px) !important; padding-top: 10px !important; }
+    .site-brand-main img { width: 34px !important; }
+    .site-brand-name { font-size: 0.94rem !important; letter-spacing: 0.15em !important; }
+    .site-broker-link { font-size: 0.5rem !important; letter-spacing: 0.18em !important; }
+    .site-menu { gap: 7px 8px !important; }
+    .site-menu a { font-size: 0.61rem !important; letter-spacing: 0.055em !important; }
+    .site-menu a.site-menu-cta { padding: 9px 11px !important; }
+  }
+</style>
+
 <script src="./support.js"></script>
 </head>
 <body>
@@ -46,21 +98,21 @@
 <div style="font-family: 'Mulish', system-ui, sans-serif; color: #23271f; background: #f4ede1; line-height: 1.65; overflow-x: hidden;">
 
   <!-- HEADER -->
-  <header style="position: sticky; top: 0; z-index: 50; background: rgba(244,237,225,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(23,49,41,0.12);">
-    <nav style="width: min(1240px, calc(100% - 48px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; min-height: 84px;">
-      <a href="#top" style="display: flex; align-items: center; gap: 13px; text-decoration: none; color: inherit;">
-        <img src="logo-mark.png" alt="Skyler Davis Group" style="width: 46px; height: auto; display: block;">
-        <span style="display: flex; flex-direction: column; line-height: 1;">
-          <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #173129;">Skyler Davis</span>
-          <a href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" style="font-size: 0.6rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: #8a8475; margin-top: 5px; text-decoration: none;">Four Seasons Sotheby's</a>
-        </span>
-      </a>
-      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+  <header class="site-header" style="position: sticky; top: 0; z-index: 50; background: rgba(244,237,225,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(23,49,41,0.12); font-family: 'Mulish', system-ui, sans-serif;">
+    <nav class="site-nav" style="width: min(1240px, calc(100% - 48px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; min-height: 84px;">
+      <div class="site-brand" style="display: flex; align-items: center; gap: 13px; color: inherit;">
+        <a class="site-brand-main" href="#top" style="display: flex; align-items: center; gap: 13px; text-decoration: none; color: inherit;">
+          <img src="logo-mark.png" alt="Skyler Davis Group" style="width: 46px; height: auto; display: block;">
+          <span class="site-brand-name" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.18rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #173129; line-height: 1;">Skyler Davis</span>
+        </a>
+        <a class="site-broker-link" href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" style="font-size: 0.6rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: #8a8475; text-decoration: none; line-height: 1;">Four Seasons Sotheby's</a>
+      </div>
+      <div class="site-menu" style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
         <a href="about.html" style="text-decoration: none; color: #3a4039; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="color: #b08d57;">About</a>
         <a href="about.html" style="text-decoration: none; color: #3a4039; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="color: #b08d57;">Approach</a>
         <a href="index.html#communities" style="text-decoration: none; color: #3a4039; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="color: #b08d57;">Communities</a>
         <a href="preparing-your-home.html" style="text-decoration: none; color: #3a4039; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="color: #b08d57;">Sell</a>
-        <a href="index.html#contact" style="text-decoration: none; background: #173129; color: #f4ede1; padding: 13px 24px; border-radius: 2px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #b08d57; color: #fffdf8;">Let's Talk</a>
+        <a class="site-menu-cta" href="index.html#contact" style="text-decoration: none; background: #173129; color: #f4ede1; padding: 13px 24px; border-radius: 2px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #b08d57; color: #fffdf8;">Let's Talk</a>
       </div>
     </nav>
   </header>
@@ -83,32 +135,33 @@
       </div>
     </section>
 
-    <!-- INTRO STATEMENT -->
-    <section style="background: #f4ede1; padding: clamp(80px, 11vw, 140px) 0;">
-      <div style="width: min(1000px, calc(100% - 48px)); margin: 0 auto; text-align: center;" data-reveal>
-        <p style="margin: 0 0 26px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">Skyler Davis Group &middot; Four Seasons Sotheby's International Realty</p>
-        <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(1.7rem, 3.6vw, 2.9rem); line-height: 1.25; letter-spacing: -0.01em; margin: 0;">A modern Vermont real estate advisor backed by Four Seasons Sotheby's International Realty &mdash; pairing the discipline of an elite competitor with the quiet confidence of a brokerage connected to distinctive properties around the world.</p>
-      </div>
-    </section>
-
     <!-- FOUR SEASONS SOTHEBY'S AFFILIATION -->
-    <section style="background: #fffdf8; padding: clamp(54px, 7vw, 88px) 0; border-top: 1px solid rgba(23,49,41,0.1); border-bottom: 1px solid rgba(23,49,41,0.1);">
-      <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(34px, 6vw, 74px); align-items: center;">
+    <section style="background: #f4ede1; padding: clamp(78px, 10vw, 132px) 0; border-bottom: 1px solid rgba(23,49,41,0.1);">
+      <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(min(100%, 320px), 0.92fr); gap: clamp(38px, 6vw, 78px); align-items: center;">
         <div data-reveal>
-          <p style="margin: 0 0 16px; color: #b08d57; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase;">Brokerage Affiliation</p>
-          <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 3.8vw, 3.15rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 20px;">Four Seasons Sotheby's International Realty.</h2>
-          <p style="color: #4a4f46; font-size: 1.06rem; margin: 0; max-width: 650px;">I pair personal, local guidance with the presentation, referral network, and luxury marketing platform of Four Seasons Sotheby's International Realty. The result is a more connected experience for Vermont buyers and sellers, without losing the private, hands-on advisory relationship.</p>
+          <p style="margin: 0 0 22px; color: #b08d57; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.3em; text-transform: uppercase;">Skyler Davis Group &middot; Four Seasons Sotheby's International Realty</p>
+          <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2.05rem, 4vw, 3.25rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 22px;">Personal Vermont guidance, backed by Four Seasons Sotheby's.</h2>
+          <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(1.35rem, 2.4vw, 2.05rem); line-height: 1.28; letter-spacing: -0.01em; margin: 0 0 24px;">A modern Vermont real estate advisor backed by Four Seasons Sotheby's International Realty &mdash; pairing the discipline of an elite competitor with the quiet confidence of a brokerage connected to distinctive properties around the world.</p>
+          <p style="color: #4a4f46; font-size: 1.06rem; line-height: 1.75; margin: 0 0 18px; max-width: 720px;">I pair personal, local guidance with the presentation, referral network, and luxury marketing platform of Four Seasons Sotheby's International Realty. The result is a more connected experience for Vermont buyers and sellers, without losing the private, hands-on advisory relationship.</p>
+          <p style="color: #4a4f46; font-size: 1.06rem; line-height: 1.75; margin: 0; max-width: 720px;">Every home I represent is supported by Four Seasons Sotheby's International Realty and the broader Sotheby's International Realty network, giving distinctive Vermont properties a polished, far-reaching platform.</p>
         </div>
-        <div data-reveal style="background: #f4ede1; border: 1px solid rgba(23,49,41,0.12); border-radius: 3px; padding: clamp(26px, 4vw, 38px);">
-          <div data-four-seasons-logo-card style="background: #fffdf8; border: 1px solid rgba(23,49,41,0.1); border-radius: 3px; padding: clamp(16px, 3vw, 22px); margin: 0 0 26px; display: flex; justify-content: center; align-items: center;">
-            <a href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" aria-label="Visit Four Seasons Sotheby's International Realty" style="display: inline-block; text-decoration: none; line-height: 0;"><img src="four-seasons-sothebys-logo.png" alt="Four Seasons Sotheby's International Realty" style="width: min(100%, 420px); height: auto; display: block;"></a>
-          </div>
+        <div data-reveal style="background: #fffdf8; border: 1px solid rgba(23,49,41,0.12); border-radius: 3px; padding: clamp(28px, 4vw, 42px); box-shadow: 0 24px 70px rgba(23,49,41,0.08);">
+          <a href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" aria-label="Visit Four Seasons Sotheby's International Realty" style="display: block; text-decoration: none; line-height: 0; margin: 0 0 30px;"><img src="four-seasons-sothebys-logo-transparent.png" alt="Four Seasons Sotheby's International Realty" style="width: min(100%, 430px); height: auto; display: block; margin: 0 auto;"></a>
           <span style="display: block; color: #8a8475; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px;">Connected By Design</span>
-          <div style="display: grid; gap: 14px;">
+          <div style="display: grid; gap: 14px; margin-bottom: 34px;">
             <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="color: #b08d57; font-weight: 800;">01</span><p style="margin: 0; color: #4a4f46;">Vermont market knowledge with Sotheby's-level presentation.</p></div>
             <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="color: #b08d57; font-weight: 800;">02</span><p style="margin: 0; color: #4a4f46;">Local service backed by a recognized luxury real estate brand.</p></div>
             <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="color: #b08d57; font-weight: 800;">03</span><p style="margin: 0; color: #4a4f46;">A broader buyer network for distinctive homes across Vermont.</p></div>
           </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; border-top: 1px solid rgba(23,49,41,0.12); padding-top: 28px;">
+            <sc-for list="{{ reach }}" as="r" hint-placeholder-count="3">
+              <div>
+                <span style="display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); color: #173129; font-weight: 500; line-height: 1; letter-spacing: -0.02em;">{{ r.figure }}</span>
+                <span style="display: block; margin-top: 9px; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8475;">{{ r.label }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <p style="color: #a59f90; font-size: 0.78rem; margin: 24px 0 0;">Figures reflect the global Sotheby's International Realty network.</p>
         </div>
       </div>
     </section>
@@ -195,24 +248,6 @@
       </div>
     </section>
 
-    <!-- GLOBAL REACH -->
-    <section style="background: #f4ede1; padding: clamp(80px, 10vw, 130px) 0;">
-      <div style="width: min(1040px, calc(100% - 48px)); margin: 0 auto; text-align: center;" data-reveal>
-        <p style="margin: 0 0 20px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">Four Seasons Sotheby's Reach</p>
-        <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 auto 24px; max-width: 820px;">Local guidance, elevated by Four Seasons Sotheby's.</h2>
-        <p style="color: #4a4f46; font-size: 1.08rem; max-width: 660px; margin: 0 auto 56px;">Every home I represent is supported by Four Seasons Sotheby's International Realty and the broader Sotheby's International Realty network, giving distinctive Vermont properties a polished, far-reaching platform.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; border-top: 1px solid rgba(23,49,41,0.16); padding-top: 48px;">
-          <sc-for list="{{ reach }}" as="r" hint-placeholder-count="3">
-            <div>
-              <span style="display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.6rem, 5vw, 3.6rem); color: #173129; font-weight: 500; line-height: 1; letter-spacing: -0.02em;">{{ r.figure }}</span>
-              <span style="display: block; margin-top: 12px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8475;">{{ r.label }}</span>
-            </div>
-          </sc-for>
-        </div>
-        <p style="color: #a59f90; font-size: 0.82rem; margin: 36px 0 0;">Figures reflect the global Sotheby's International Realty network.</p>
-      </div>
-    </section>
-
     <!-- VALUATION BAND -->
     <section id="valuation" style="position: relative; background-image: url('lake-champlain.jpg'); background-size: cover; background-position: center 60%; background-attachment: fixed;">
       <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,32,27,0.78), rgba(14,32,27,0.6));"></div>
@@ -279,9 +314,7 @@
       <div style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding-bottom: 40px; border-bottom: 1px solid rgba(255,253,248,0.14);">
         <div style="flex: 1 1 320px; max-width: 380px;">
           <img src="logo-horizontal.png" alt="Skyler Davis Group Real Estate" style="width: 240px; height: auto; filter: brightness(0) invert(1); opacity: 0.92; margin-bottom: 18px;">
-          <div style="background: #fffdf8; border: 1px solid rgba(255,253,248,0.22); border-radius: 3px; padding: 11px 13px; display: inline-flex; align-items: center; margin: 0 0 18px; max-width: 300px;">
-            <a href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" aria-label="Visit Four Seasons Sotheby's International Realty" style="display: inline-block; text-decoration: none; line-height: 0;"><img src="four-seasons-sothebys-logo.png" alt="Four Seasons Sotheby's International Realty" style="width: 270px; max-width: 100%; height: auto; display: block;"></a>
-          </div>
+          <a href="https://www.sothebysrealty.com/four" target="_blank" rel="noopener" aria-label="Visit Four Seasons Sotheby's International Realty" style="display: inline-block; text-decoration: none; line-height: 0; margin: 0 0 18px;"><img src="four-seasons-sothebys-logo-white.png" alt="Four Seasons Sotheby's International Realty" style="width: 270px; max-width: 100%; height: auto; display: block; opacity: 0.9;"></a>
           <p style="color: rgba(255,253,248,0.62); margin: 0; font-size: 0.98rem;">Global Real Estate Advisor<br>Four Seasons Sotheby's International Realty</p>
         </div>
         <div style="display: flex; gap: clamp(36px, 6vw, 72px); flex-wrap: wrap;">
@@ -342,7 +375,7 @@ class Component extends DCLogic {
       year: new Date().getFullYear(),
       credentials: ['Former U.S. Ski Team', 'D-I Soccer & 2\u00d7 Captain, UVM', 'MBA, University of Denver', "Four Seasons Sotheby's International Realty"],
       differentiators: [
-        { mark: '\u2014', title: 'Local fluency', body: 'A native read on the towns, schools, trails, and shoreline that actually shape value here.' },
+        { mark: '\u2014', title: 'Local fluency', body: 'A grounded local perspective on the towns, schools, trails, and shoreline that actually shape value here.' },
         { mark: '\u2014', title: 'Competitive edge', body: "An elite athlete's preparation and composure when negotiations matter most." },
         { mark: '\u2014', title: 'Business rigor', body: 'MBA-trained pricing and strategy, so every decision is grounded in data, not guesswork.' },
         { mark: '\u2014', title: 'Brand platform', body: "Four Seasons Sotheby's International Realty presentation and network behind every listing." },
