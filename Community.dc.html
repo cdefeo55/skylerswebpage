@@ -7,6 +7,78 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="./support.js"></script>
+<style data-site-mobile-perfect>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img { max-width: 100%; height: auto; }
+  a { -webkit-tap-highlight-color: transparent; }
+
+  .sothebys-reach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+  }
+  .sothebys-stat {
+    min-width: 0 !important;
+    text-align: center !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .sothebys-stat-label {
+    line-height: 1.32 !important;
+    max-width: 150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  @media (max-width: 760px) {
+    [style*="calc(100% - 48px)"] { width: min(100% - 32px, 1240px) !important; }
+    [style*="min-width: 320px"], [style*="min-width: 300px"], [style*="min-width: 290px"] { min-width: 0 !important; }
+    [style*="grid-template-columns: minmax(0, 1.08fr)"] { grid-template-columns: 1fr !important; }
+    [style*="background-attachment: fixed"] { background-attachment: scroll !important; }
+    a[style*="padding: 18px 44px"], a[style*="padding: 17px 36px"], a[style*="padding: 16px 32px"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    .sothebys-affiliation-card { padding: 26px 20px !important; }
+    .sothebys-affiliation-card img { width: min(100%, 340px) !important; }
+    .sothebys-reach-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+      padding-top: 22px !important;
+    }
+    .sothebys-stat {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: baseline !important;
+      justify-content: space-between !important;
+      gap: 18px !important;
+      text-align: left !important;
+      padding: 15px 0 !important;
+      border-bottom: 1px solid rgba(23,49,41,0.10) !important;
+    }
+    .sothebys-stat:last-child { border-bottom: 0 !important; }
+    .sothebys-stat-figure {
+      font-size: 2.05rem !important;
+      white-space: nowrap !important;
+      flex: 0 0 auto !important;
+    }
+    .sothebys-stat-label {
+      text-align: right !important;
+      max-width: 150px !important;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    [style*="calc(100% - 48px)"] { width: min(100% - 26px, 1240px) !important; }
+    .sothebys-stat { gap: 14px !important; }
+    .sothebys-stat-figure { font-size: 1.85rem !important; }
+    .sothebys-stat-label { font-size: 0.62rem !important; letter-spacing: 0.11em !important; }
+  }
+</style>
 </head>
 <body>
 <x-dc>
