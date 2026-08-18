@@ -79,6 +79,57 @@
     .sothebys-stat-label { font-size: 0.62rem !important; letter-spacing: 0.11em !important; }
   }
 </style>
+
+
+
+<style data-final-mobile-polish>
+  .site-brand-name { white-space: nowrap; }
+  .site-broker-link { white-space: normal; }
+  .sothebys-stat { text-align: center; min-width: 0; }
+  .sothebys-stat-label { line-height: 1.25 !important; }
+
+  @media (max-width: 760px) {
+    .site-header { padding-top: env(safe-area-inset-top) !important; }
+    .site-nav { width: min(100% - 32px, 1240px) !important; padding: 18px 0 14px !important; gap: 13px !important; }
+    .site-brand-row { width: 100% !important; justify-content: center !important; }
+    .site-brand-text { max-width: calc(100vw - 96px) !important; }
+    .site-brand-name { font-size: 1rem !important; letter-spacing: 0.12em !important; }
+    .site-broker-link { font-size: 0.5rem !important; letter-spacing: 0.14em !important; opacity: 0.95 !important; }
+    .site-menu { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; width: 100% !important; }
+    .site-menu a { font-size: 0.6rem !important; letter-spacing: 0.055em !important; padding: 10px 6px !important; min-height: 38px !important; white-space: normal !important; line-height: 1.15 !important; }
+    .site-menu a.site-menu-cta { grid-column: auto !important; min-height: 38px !important; padding: 10px 6px !important; }
+
+    .brokerage-section { padding: 58px 0 64px !important; }
+    .brokerage-section > div { width: min(100% - 32px, 1180px) !important; display: block !important; }
+    .brokerage-copy { margin-bottom: 26px !important; }
+    .brokerage-copy > p:first-child { font-size: 0.62rem !important; letter-spacing: 0.18em !important; line-height: 1.55 !important; margin-bottom: 14px !important; }
+    .brokerage-copy h2 { font-size: clamp(1.95rem, 10vw, 2.55rem) !important; line-height: 1.02 !important; margin-bottom: 16px !important; }
+    .brokerage-copy p { font-size: 0.98rem !important; line-height: 1.62 !important; }
+    .brokerage-copy p[style*="Cormorant"] { font-size: 1.24rem !important; line-height: 1.28 !important; margin-bottom: 16px !important; }
+    .sothebys-affiliation-card { padding: 24px 20px !important; box-shadow: 0 18px 42px rgba(23,49,41,0.08) !important; }
+    .sothebys-affiliation-card img { width: min(100%, 300px) !important; }
+    .sothebys-affiliation-card a[aria-label] { margin-bottom: 22px !important; }
+    .sothebys-affiliation-card > span { font-size: 0.62rem !important; letter-spacing: 0.16em !important; margin-bottom: 16px !important; }
+    .sothebys-affiliation-card div[style*="display: grid; gap: 14px"] { gap: 12px !important; margin-bottom: 24px !important; }
+    .sothebys-affiliation-card div[style*="display: flex; gap: 14px"] { gap: 10px !important; }
+    .sothebys-affiliation-card div[style*="display: flex; gap: 14px"] p { font-size: 0.92rem !important; line-height: 1.45 !important; }
+    .sothebys-reach-grid { grid-template-columns: 1fr !important; gap: 0 !important; padding-top: 18px !important; }
+    .sothebys-stat { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 16px !important; text-align: left !important; padding: 13px 0 !important; border-bottom: 1px solid rgba(23,49,41,0.1) !important; }
+    .sothebys-stat:last-child { border-bottom: 0 !important; }
+    .sothebys-stat-figure { font-size: 2.05rem !important; min-width: 104px !important; }
+    .sothebys-stat-label { text-align: right !important; font-size: 0.62rem !important; letter-spacing: 0.11em !important; max-width: 135px !important; }
+    .sothebys-affiliation-card > p:last-child { font-size: 0.72rem !important; line-height: 1.45 !important; margin-top: 14px !important; }
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMCB28YDX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7WMCB28YDX');
+</script>
 </head>
 <body>
 <x-dc>
@@ -102,6 +153,16 @@
         <a href="index.html#contact" style="text-decoration: none; background: #173129; color: #f4ede1; padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #b08d57; color: #fffdf8;">Talk About {{ town.name }}</a>
         <a href="index.html#communities" style="text-decoration: none; background: transparent; color: #173129; border: 1px solid rgba(23,49,41,0.3); padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: .25s ease;" style-hover="border-color: #b08d57; color: #b08d57;">All Communities</a>
       </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY PHOTO -->
+  <section style="{{ town.photoSectionStyle }}">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <figure style="margin: 0; border-radius: 4px; overflow: hidden; box-shadow: 0 28px 70px rgba(23,49,41,0.14); background: #173129;">
+        <img src="{{ town.photo }}" alt="{{ town.photoAlt }}" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+      </figure>
+      <p style="margin: 14px 0 0; color: #6b6f65; font-size: 0.82rem; letter-spacing: 0.04em;">{{ town.photoCaption }}</p>
     </div>
   </section>
 
@@ -160,7 +221,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;stowe&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;stowe&quot;,&quot;shelburne&quot;,&quot;charlotte&quot;,&quot;burlington&quot;,&quot;south-burlington&quot;,&quot;stratton&quot;,&quot;williston&quot;,&quot;jericho&quot;,&quot;richmond&quot;,&quot;hinesburg&quot;,&quot;colchester&quot;,&quot;winooski&quot;,&quot;essex&quot;],&quot;section&quot;:&quot;Community&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;stowe&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;stowe&quot;,&quot;waterbury&quot;,&quot;jay-peak&quot;,&quot;shelburne&quot;,&quot;charlotte&quot;,&quot;burlington&quot;,&quot;south-burlington&quot;,&quot;stratton&quot;,&quot;williston&quot;,&quot;jericho&quot;,&quot;richmond&quot;,&quot;hinesburg&quot;,&quot;colchester&quot;,&quot;south-hero&quot;,&quot;winooski&quot;,&quot;essex&quot;],&quot;section&quot;:&quot;Community&quot;}}">
 const TOWNS = {
   stowe: {
     name: 'Stowe', region: 'Stowe \u00b7 Vermont',
@@ -174,6 +235,34 @@ const TOWNS = {
       { title: 'Local demand', body: 'Driven by Mount Mansfield, resort access, village charm, restaurants, trails, and four-season tourism that keeps second-home interest strong.' },
       { title: 'Property lens', body: 'Resort-area homes require careful review of association documents, rental restrictions, property management, winter systems, and access.' },
       { title: 'Due diligence', body: 'I look closely at heating systems, roof and snow-load, furnishings, permitting, and whether the home truly supports the intended use.' },
+    ],
+  },
+  waterbury: {
+    name: 'Waterbury', region: 'Waterbury \u00b7 Vermont',
+    lede: "A central Vermont village with strong access to Stowe, the Mad River Valley, I-89, and year-round outdoor recreation — a practical market for buyers who want mountain access without being fully resort-based.",
+    overviewTitle: 'A mountain gateway with everyday livability.',
+    overview: [
+      'Waterbury is valued for its location: close to Stowe, close to Burlington and Montpelier by interstate, and surrounded by trails, rivers, ski access, and local food culture.',
+      'I help buyers and sellers think through commute, flood-zone considerations, village versus country settings, and how proximity to the mountains shapes demand.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by Stowe access, I-89 convenience, restaurants, recreation, and a strong year-round community feel.' },
+      { title: 'Property lens', body: 'Village homes, country properties, and mountain-access homes require different pricing and due-diligence questions.' },
+      { title: 'Due diligence', body: 'I review flood considerations, systems, access, land characteristics, and how each property fits the buyer's intended use.' },
+    ],
+  },
+  'jay-peak': {
+    name: 'Jay Peak', region: 'Jay Peak \u00b7 Northern Vermont',
+    lede: "A northern Vermont resort market centered on Jay Peak Resort, deep winter demand, vacation ownership, and four-season recreation near the Canadian border.",
+    overviewTitle: 'A ski and second-home market with distinct dynamics.',
+    overview: [
+      'Jay Peak real estate is shaped by resort access, rental potential, winter systems, association terms, and the realities of owning in a remote mountain setting.',
+      'I help clients evaluate ski access, carrying costs, management, rental rules, and whether a property supports the way they actually want to use it.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by Jay Peak Resort, deep snow, golf, waterpark amenities, and second-home interest from Vermont, New England, and Canada.' },
+      { title: 'Property lens', body: 'Condos, townhomes, and chalets need careful review of HOA terms, rental programs, furnishings, and winter maintenance.' },
+      { title: 'Due diligence', body: 'I look closely at heating, access roads, association rules, rental history, and seasonal ownership costs.' },
     ],
   },
   shelburne: {
@@ -263,6 +352,9 @@ const TOWNS = {
   jericho: {
     name: 'Jericho', region: 'Jericho \u00b7 Vermont',
     lede: "A quiet, scenic town in the shadow of Mount Mansfield, Jericho offers larger lots, rural character, and an easy connection to both Burlington and the mountains.",
+    photo: 'jericho-vt-real-estate.jpg',
+    photoAlt: 'Old Red Mill beside the Browns River in Jericho Vermont',
+    photoCaption: 'Jericho, Vermont',
     overviewTitle: 'Rural character with mountain access.',
     overview: [
       'Jericho appeals to buyers who want space, privacy, and natural beauty while staying within reach of Burlington. Homes range from historic village properties to country homes on acreage.',
@@ -319,6 +411,9 @@ const TOWNS = {
   essex: {
     name: 'Essex', region: 'Essex \u00b7 Vermont',
     lede: "Essex and Essex Junction offer established neighborhoods, strong schools, and everyday convenience \u2014 a practical, family-friendly market with good value near Burlington.",
+    photo: 'essex-vt-real-estate.jpg',
+    photoAlt: 'Aerial view of Essex Vermont village at dusk',
+    photoCaption: 'Essex, Vermont',
     overviewTitle: 'Family-friendly, convenient, and well-rounded.',
     overview: [
       'Essex draws buyers who want established neighborhoods, amenities, and an easy commute. Inventory spans village homes near the Junction, subdivisions, and properties with more land toward the town\u2019s edges.',
@@ -330,9 +425,26 @@ const TOWNS = {
       { title: 'Due diligence', body: 'I evaluate condition, energy efficiency, and how each home compares within its neighborhood and price point.' },
     ],
   },
+  'south-hero': {
+    name: 'South Hero', region: 'South Hero \u00b7 Lake Champlain Islands',
+    lede: "A Lake Champlain island community with shoreline homes, open land, vineyards, and a quiet pace within reach of Burlington and the Champlain Valley.",
+    overviewTitle: 'Island living with lake-driven value.',
+    overview: [
+      'South Hero appeals to buyers looking for waterfront, views, privacy, and a more relaxed island setting. Properties range from seasonal cottages to year-round lake homes and country residences.',
+      'Value is shaped by frontage, water access, views, septic and water systems, flood considerations, and year-round usability.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Lake Champlain frontage, boating, views, land, and the lifestyle appeal of the Islands.' },
+      { title: 'Property lens', body: 'Waterfront and island properties require close review of shoreline rules, septic, wells, access, and seasonal limitations.' },
+      { title: 'Due diligence', body: 'I evaluate frontage, flood zones, systems, road access, and whether a property functions year-round or seasonally.' },
+    ],
+  },
   winooski: {
     name: 'Winooski', region: 'Winooski \u00b7 Vermont',
     lede: "Vermont's most walkable small city, Winooski has transformed its historic mill district into a vibrant, amenity-rich downtown with strong rental and ownership demand.",
+    photo: 'winooski-vt-real-estate.jpg',
+    photoAlt: 'Winooski Falls and downtown Winooski Vermont',
+    photoCaption: 'Winooski, Vermont',
     overviewTitle: 'Walkable, revitalized, and in demand.',
     overview: [
       'Winooski packs restaurants, culture, and convenience into a compact, walkable footprint. Inventory leans toward condos, converted mill buildings, and close-in homes.',
@@ -347,15 +459,24 @@ const TOWNS = {
 };
 
 const ALL = [
-  ['stowe', 'Stowe'], ['shelburne', 'Shelburne'], ['charlotte', 'Charlotte'], ['burlington', 'Burlington'],
+  ['stowe', 'Stowe'], ['waterbury', 'Waterbury'], ['jay-peak', 'Jay Peak'], ['shelburne', 'Shelburne'], ['charlotte', 'Charlotte'], ['burlington', 'Burlington'],
   ['south-burlington', 'South Burlington'], ['stratton', 'Stratton'], ['williston', 'Williston'], ['jericho', 'Jericho'],
-  ['richmond', 'Richmond'], ['hinesburg', 'Hinesburg'], ['colchester', 'Colchester'], ['winooski', 'Winooski'], ['essex', 'Essex'],
+  ['richmond', 'Richmond'], ['hinesburg', 'Hinesburg'], ['colchester', 'Colchester'], ['south-hero', 'South Hero'], ['winooski', 'Winooski'], ['essex', 'Essex'],
 ];
 
 class Component extends DCLogic {
   renderVals() {
     const slug = this.props.slug || 'stowe';
-    const town = TOWNS[slug] || TOWNS.stowe;
+    const baseTown = TOWNS[slug] || TOWNS.stowe;
+    const town = {
+      ...baseTown,
+      photo: baseTown.photo || 'lake-champlain.jpg',
+      photoAlt: baseTown.photoAlt || '',
+      photoCaption: baseTown.photoCaption || '',
+      photoSectionStyle: baseTown.photo
+        ? 'background: #fffdf8; padding: 0 0 clamp(70px, 8vw, 105px); border-top: 1px solid rgba(23,49,41,0.08);'
+        : 'display:none;',
+    };
     const others = ALL.filter(([s]) => s !== slug).map(([s, name]) => ({ name, href: s + '-vt-real-estate.html' }));
     return { town, others };
   }
