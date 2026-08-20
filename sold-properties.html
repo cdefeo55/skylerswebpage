@@ -219,6 +219,20 @@
   }
 </style>
 
+<style data-sold-review-polish>
+  .sold-review-section { background:#fffdf8; padding:0 0 clamp(70px, 8vw, 110px); }
+  .sold-review-inner { width:min(960px, calc(100% - 48px)); margin:0 auto; }
+  .sold-review-card { background:#f4ede1; border:1px solid rgba(176,141,87,0.38); border-radius:3px; padding:clamp(18px, 3vw, 28px); box-shadow:0 22px 60px rgba(14,32,27,0.09); }
+  .sold-review-card img { display:block; width:100%; height:auto; border-radius:2px; }
+  .sold-review-caption { margin:18px 0 0; color:#777166; font-size:0.84rem; line-height:1.55; text-align:center; }
+  @media (max-width: 760px) {
+    .sold-review-section { padding: 0 0 58px !important; }
+    .sold-review-inner { width:min(100% - 30px, 960px) !important; }
+    .sold-review-card { padding:12px !important; box-shadow:0 14px 36px rgba(14,32,27,0.08) !important; }
+    .sold-review-caption { font-size:0.78rem !important; margin-top:12px !important; }
+  }
+</style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMCB28YDX"></script>
 </head>
@@ -266,6 +280,15 @@
           </ul>
           <p style="margin:22px 0 0; color:#777166; font-size:0.82rem; line-height:1.5;">Property details are summarized from publicly available listing information and the linked Four Seasons Sotheby’s property profile. For complete property history, photos, disclosures, and brokerage details, use the Sotheby’s link.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sold-review-section" aria-labelledby="sold-review-heading">
+    <div class="sold-review-inner">
+      <div class="sold-review-card">
+        <img src="sold-client-review-skyler-davis.png" alt="Client review for Skyler Davis: Skyler was simply amazing. Thank you for making the process easy, Skyler!" loading="lazy">
+        <p class="sold-review-caption" id="sold-review-heading">Client feedback connected to the 226 Fairway Drive sale.</p>
       </div>
     </div>
   </section>
