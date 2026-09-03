@@ -455,6 +455,170 @@
   }
 </style>
 
+
+<style data-current-listings-styles>
+  .current-listings-section {
+    background: #fffdf8;
+    padding: clamp(76px, 9vw, 116px) 0;
+    border-top: 1px solid rgba(23,49,41,0.10);
+  }
+  .current-listings-inner {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+  .current-listings-intro {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: end;
+    margin-bottom: clamp(34px, 5vw, 56px);
+  }
+  .current-listings-eyebrow {
+    margin: 0 0 14px;
+    color: #b08d57;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+  }
+  .current-listings-heading {
+    margin: 0;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.6rem, 5.6vw, 5rem);
+    line-height: 0.95;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+  }
+  .current-listings-copy {
+    margin: 0;
+    color: #4a4f46;
+    font-size: clamp(1rem, 1.35vw, 1.14rem);
+    line-height: 1.72;
+    max-width: 650px;
+  }
+  .current-listings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .listing-card {
+    background: #f8f1e7;
+    border: 1px solid rgba(176,141,87,0.34);
+    box-shadow: 0 24px 58px rgba(23,49,41,0.09);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .listing-card-image {
+    width: 100%;
+    aspect-ratio: 1.35 / 1;
+    object-fit: cover;
+    display: block;
+    background: #173129;
+  }
+  .listing-card-body {
+    padding: 26px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .listing-card-town {
+    margin: 0 0 12px;
+    color: #b08d57;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .listing-card-title {
+    margin: 0 0 14px;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.9rem, 2.4vw, 2.45rem);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .listing-card-copy {
+    margin: 0 0 24px;
+    color: #4a4f46;
+    font-size: 0.98rem;
+    line-height: 1.62;
+    flex: 1;
+  }
+  .listing-card-link {
+    display: inline-block;
+    align-self: flex-start;
+    text-decoration: none;
+    background: #173129;
+    color: #f4ede1;
+    border: 1px solid #173129;
+    padding: 13px 21px;
+    border-radius: 2px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .listing-card-link:hover {
+    background: #b08d57;
+    border-color: #b08d57;
+    color: #fffdf8;
+    transform: translateY(-1px);
+  }
+  .current-listings-note {
+    margin: 24px 0 0;
+    color: rgba(74,79,70,0.78);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  @media (max-width: 900px) {
+    .current-listings-grid { grid-template-columns: 1fr; }
+    .listing-card { max-width: 640px; }
+  }
+  @media (max-width: 760px) {
+    .current-listings-section { padding: 64px 0; }
+    .current-listings-inner { width: min(100% - 32px, 1180px); }
+    .current-listings-intro { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
+    .current-listings-heading { font-size: clamp(2.25rem, 12vw, 3.25rem); }
+    .current-listings-copy { font-size: 0.98rem; line-height: 1.62; }
+    .listing-card-body { padding: 24px 20px 22px; }
+    .listing-card-title { font-size: clamp(2rem, 10vw, 2.55rem); }
+    .listing-card-link { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+  }
+</style>
+
+
+<style data-home-mobile-contact-button-fix>
+  @media (max-width: 760px) {
+    .site-menu {
+      align-items: stretch !important;
+    }
+    .site-menu a {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+    .site-menu a.site-menu-cta {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      min-height: 42px !important;
+      padding: 12px 14px !important;
+      margin-top: 2px !important;
+      border-radius: 2px !important;
+      background: #173129 !important;
+      color: #f4ede1 !important;
+      letter-spacing: 0.12em !important;
+      line-height: 1.15 !important;
+    }
+  }
+</style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMCB28YDX"></script>
 <script>
@@ -511,6 +675,53 @@
     </section>
 
     <!-- FOUR SEASONS SOTHEBY'S AFFILIATION -->
+
+  <section class="current-listings-section" id="current-listings">
+    <div class="current-listings-inner">
+      <div class="current-listings-intro">
+        <div>
+          <p class="current-listings-eyebrow">Current listings</p>
+          <h2 class="current-listings-heading">Homes Skyler is representing now.</h2>
+        </div>
+        <p class="current-listings-copy">A closer look at active opportunities across Burlington, Essex Junction, and South Burlington. Listing details can change quickly, so each property links directly to the Sotheby’s listing page for the most current information.</p>
+      </div>
+
+      <div class="current-listings-grid">
+        <article class="listing-card">
+          <img class="listing-card-image" src="listing-126-foster-street-burlington.png" alt="Exterior of 126 Foster Street in Burlington Vermont">
+          <div class="listing-card-body">
+            <p class="listing-card-town">Burlington, Vermont</p>
+            <h3 class="listing-card-title">126 Foster Street</h3>
+            <p class="listing-card-copy">A Burlington listing with residential convenience and direct access to the city’s everyday lifestyle, dining, waterfront, and neighborhood energy.</p>
+            <a class="listing-card-link" href="https://www.sothebysrealty.com/eng/sales/detail/180-l-4387-364wpj/126-foster-street-burlington-vt-05401" target="_blank" rel="noopener noreferrer">View listing</a>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <img class="listing-card-image" src="listing-65-pearl-street-essex-junction.png" alt="Exterior of 65 Pearl Street Unit 3 in Essex Junction Vermont">
+          <div class="listing-card-body">
+            <p class="listing-card-town">Essex Junction, Vermont</p>
+            <h3 class="listing-card-title">65 Pearl Street, Unit 3</h3>
+            <p class="listing-card-copy">A well-positioned Essex Junction property close to the village-style amenities, services, and everyday convenience that define the area.</p>
+            <a class="listing-card-link" href="https://www.sothebysrealty.com/eng/sales/detail/180-l-4387-23267t/65-pearl-street-3-essex-junction-vt-05452" target="_blank" rel="noopener noreferrer">View listing</a>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <img class="listing-card-image" src="listing-99-westview-drive-south-burlington.png" alt="Exterior of 99 Westview Drive in South Burlington Vermont">
+          <div class="listing-card-body">
+            <p class="listing-card-town">South Burlington, Vermont</p>
+            <h3 class="listing-card-title">99 Westview Drive</h3>
+            <p class="listing-card-copy">A South Burlington listing set in one of the area’s most consistently practical markets for access, schools, neighborhoods, and daily convenience.</p>
+            <a class="listing-card-link" href="https://www.sothebysrealty.com/eng/sales/detail/180-l-4387-tp8n44/99-westview-drive-south-burlington-vt-05403" target="_blank" rel="noopener noreferrer">View listing</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="current-listings-note">For the latest pricing, status, showing availability, and property details, use the Sotheby’s listing links above.</p>
+    </div>
+  </section>
+
     <section class="brokerage-section" style="background: #f4ede1; padding: clamp(78px, 10vw, 132px) 0; border-bottom: 1px solid rgba(23,49,41,0.1);">
       <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(min(100%, 320px), 0.92fr); gap: clamp(38px, 6vw, 78px); align-items: center;">
         <div class="brokerage-copy" data-reveal>
